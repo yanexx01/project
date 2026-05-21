@@ -30,9 +30,20 @@ db.sqlite3-journal
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # Environment
 .env
 .env.local
-.env.*
+*.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+.coverage
+htmlcov/
+.coverage.*
 ```
