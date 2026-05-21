@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Contacts" %} - Intercom Company{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-4">{% trans "Contact Us" %}</h1>
+        <p class="lead text-muted">{% trans "Get in touch with our team" %}</p>
+        
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-geo-alt me-2"></i>{% trans "Address" %}</h5>
+                        <p class="card-text text-muted">{% trans "Moscow, Russia" %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-telephone me-2"></i>{% trans "Phone" %}</h5>
+                        <p class="card-text text-muted">+7 (495) 123-45-67</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-envelope me-2"></i>{% trans "Email" %}</h5>
+                        <p class="card-text text-muted">info@intercom-company.ru</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="bi bi-clock me-2"></i>{% trans "Working Hours" %}</h5>
+                        <p class="card-text text-muted">{% trans "Mon-Fri: 9:00 - 18:00" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
