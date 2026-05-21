@@ -29,7 +29,7 @@
                         </small>
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text text-muted flex-grow-1">{{ news.short_description|truncatewords:20 }}</p>
-                        <a href="{% url 'news:news_detail' slug=news.slug %}" class="btn btn-outline-primary mt-3">
+                        <a href="{% url 'news:detail' slug=news.slug %}" class="btn btn-outline-primary mt-3">
                             {% trans "Read more" %}
                         </a>
                     </div>
