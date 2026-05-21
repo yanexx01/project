@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "News" %} - Intercom Company{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-4">{% trans "Latest News" %}</h1>
+        <p class="lead text-muted">{% trans "Stay updated with our latest announcements and updates" %}</p>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Debts" %} - Intercom Company{% endblock %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <h1 class="mb-4">{% trans "Outstanding Debts" %}</h1>
+        <p class="lead text-muted">{% trans "View and pay your outstanding balances" %}</p>
+    </div>
+</section>
+{% endblock %}
