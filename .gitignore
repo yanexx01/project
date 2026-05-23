@@ -1,52 +1,32 @@
-```gitignore
+```
 # Python compiled files
 *.pyc
 __pycache__/
 
-# Django migrations cache
-**/migrations/__pycache__/
-
-# Logs
-*.log
+# Django locale files (compiled translations)
+*.mo
 
 # Environment variables
 .env
 .env.local
-.env.*
+*.env.*
 
-# IDE
+# IDE and editor files
 .vscode/
 .idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Temporary files
-*.tmp
 *.swp
 *.swo
+*.tmp
 
-# Dependencies
-.venv/
-venv/
-node_modules/
-.mypy_cache/
-.pytest_cache/
-dist/
-build/
-target/
-.gradle/
+# Logs
+*.log
 
-# DB
-*.sqlite3
+# Coverage reports
+.coverage
+coverage/
+htmlcov/
 
-# Static files
-media/
-staticfiles/
+# Local configuration
+.DS_Store
+Thumbs.db
 ```
