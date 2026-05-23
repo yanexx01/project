@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
-{% load i18n %}
 
-{% block title %}{% trans "News" %} - Intercom Company{% endblock %}
-{% block meta_description %}{% trans "Latest news and announcements from our intercom company" %}{% endblock %}
+{% block title %}Новости - Интерком Компания{% endblock %}
+{% block meta_description %}Последние новости и объявления от нашей компании домофонов{% endblock %}
 
 {% block content %}
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-5 fw-bold mb-3">{% trans "Latest News" %}</h1>
-                <p class="lead text-muted">{% trans "Stay updated with our latest announcements and updates" %}</p>
+                <h1 class="display-5 fw-bold mb-3">Последние новости</h1>
+                <p class="lead text-muted">Будьте в курсе наших последних объявлений и обновлений</p>
             </div>
         </div>
 
@@ -30,7 +29,7 @@
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text text-muted flex-grow-1">{{ news.short_description|truncatewords:20 }}</p>
                         <a href="{% url 'news:detail' slug=news.slug %}" class="btn btn-outline-primary mt-3">
-                            {% trans "Read more" %}
+                            Читать далее
                         </a>
                     </div>
                 </article>
@@ -39,7 +38,7 @@
         </div>
 
         {% if is_paginated %}
-        <nav aria-label="{% trans 'News pagination' %}" class="mt-5">
+        <nav aria-label="Пагинация новостей" class="mt-5">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
@@ -81,7 +80,7 @@
             <div class="col-lg-8 mx-auto text-center">
                 <div class="alert alert-info">
                     <i class="bi bi-info-circle"></i>
-                    {% trans "No news yet. Check back later!" %}
+                    Новостей пока нет. Загляните позже!
                 </div>
             </div>
         </div>

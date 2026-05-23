@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
-{% load i18n %}
 
-{% block title %}{% trans "Debts" %} - Intercom Company{% endblock %}
-{% block meta_description %}{% trans "View and pay your outstanding balances" %}{% endblock %}
+{% block title %}Долги - Интерком Компания{% endblock %}
+{% block meta_description %}Просмотр и оплата ваших задолженностей{% endblock %}
 
 {% block content %}
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-5 fw-bold mb-3">{% trans "Outstanding Debts" %}</h1>
-                <p class="lead text-muted">{% trans "View and pay your outstanding balances" %}</p>
+                <h1 class="display-5 fw-bold mb-3">Задолженности</h1>
+                <p class="lead text-muted">Просмотр и оплата ваших задолженностей</p>
             </div>
         </div>
 
@@ -24,20 +23,20 @@
                             <i class="bi bi-person"></i>
                             {{ debt.full_name }}
                         </small>
-                        <h5 class="card-title">{% trans "Account" %}: {{ debt.account_number }}</h5>
+                        <h5 class="card-title">Лицевой счёт: {{ debt.account_number }}</h5>
                         <p class="card-text flex-grow-1">
                             <span class="badge {% if debt.is_paid %}bg-success{% else %}bg-danger{% endif %}">
                                 {% if debt.is_paid %}
-                                    {% trans "Paid" %}
+                                    Оплачено
                                 {% else %}
-                                    {% trans "Unpaid" %}
+                                    Не оплачено
                                 {% endif %}
                             </span>
                         </p>
                         <p class="fw-bold text-primary">${{ debt.amount }}</p>
                         {% if not debt.is_paid %}
                         <a href="#" class="btn btn-outline-primary mt-3">
-                            {% trans "Pay now" %}
+                            Оплатить сейчас
                         </a>
                         {% endif %}
                     </div>
@@ -47,7 +46,7 @@
         </div>
 
         {% if is_paginated %}
-        <nav aria-label="{% trans 'Debts pagination' %}" class="mt-5">
+        <nav aria-label="Пагинация долгов" class="mt-5">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
@@ -89,7 +88,7 @@
             <div class="col-lg-8 mx-auto text-center">
                 <div class="alert alert-info">
                     <i class="bi bi-check-circle"></i>
-                    {% trans "No outstanding debts. You're all caught up!" %}
+                    У вас нет задолженностей. Всё оплачено!
                 </div>
             </div>
         </div>

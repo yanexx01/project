@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
-{% load i18n %}
 
-{% block title %}{% trans "Home" %} - Intercom Company{% endblock %}
+{% block title %}Главная - Интерком Компания{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -9,17 +8,17 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="hero-title display-5">{% trans "Modern Intercom Solutions for Your Security" %}</h1>
-                <p class="hero-lead">{% trans "Professional installation, maintenance, and repair of intercom systems. Trusted by thousands of customers across Russia." %}</p>
+                <h1 class="hero-title display-5">Современные решения домофонов для вашей безопасности</h1>
+                <p class="hero-lead">Профессиональная установка, обслуживание и ремонт систем домофонов. Нам доверяют тысячи клиентов по всей России.</p>
                 <a href="{% url 'services:list' %}" class="btn btn-primary btn-lg">
-                    <i class="bi bi-tools me-2"></i>{% trans "Our Services" %}
+                    <i class="bi bi-tools me-2"></i>Наши услуги
                 </a>
                 <a href="{% url 'contacts:list' %}" class="btn btn-outline-secondary btn-lg ms-2">
-                    <i class="bi bi-envelope me-2"></i>{% trans "Contact Us" %}
+                    <i class="bi bi-envelope me-2"></i>Свяжитесь с нами
                 </a>
             </div>
             <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/building.svg" alt="Intercom System" class="img-fluid" style="max-width: 400px; opacity: 0.8;">
+                <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/icons/building.svg" alt="Система домофонов" class="img-fluid" style="max-width: 400px; opacity: 0.8;">
             </div>
         </div>
     </div>
@@ -29,8 +28,8 @@
 <section class="features-section bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">{% trans "Why Choose Us" %}</h2>
-            <p class="text-muted">{% trans "We provide the best intercom solutions for your needs" %}</p>
+            <h2 class="fw-bold">Почему выбирают нас</h2>
+            <p class="text-muted">Мы предоставляем лучшие решения домофонов для ваших нужд</p>
         </div>
         
         <div class="row g-4">
@@ -39,8 +38,8 @@
                     <div class="feature-icon">
                         <i class="bi bi-shield-check"></i>
                     </div>
-                    <h4>{% trans "Reliable Security" %}</h4>
-                    <p class="text-muted">{% trans "Modern access control systems to protect your property and loved ones." %}</p>
+                    <h4>Надёжная безопасность</h4>
+                    <p class="text-muted">Современные системы контроля доступа для защиты вашего имущества и близких.</p>
                 </div>
             </div>
             
@@ -49,8 +48,8 @@
                     <div class="feature-icon">
                         <i class="bi bi-gear-wide-connected"></i>
                     </div>
-                    <h4>{% trans "Professional Installation" %}</h4>
-                    <p class="text-muted">{% trans "Certified specialists with years of experience in intercom systems." %}</p>
+                    <h4>Профессиональная установка</h4>
+                    <p class="text-muted">Сертифицированные специалисты с многолетним опытом работы с системами домофонов.</p>
                 </div>
             </div>
             
@@ -59,8 +58,8 @@
                     <div class="feature-icon">
                         <i class="bi bi-clock-history"></i>
                     </div>
-                    <h4>{% trans "24/7 Support" %}</h4>
-                    <p class="text-muted">{% trans "Round-the-clock technical support and emergency repair services." %}</p>
+                    <h4>Поддержка 24/7</h4>
+                    <p class="text-muted">Круглосуточная техническая поддержка и аварийный ремонт.</p>
                 </div>
             </div>
             
@@ -69,8 +68,8 @@
                     <div class="feature-icon">
                         <i class="bi bi-wallet2"></i>
                     </div>
-                    <h4>{% trans "Affordable Prices" %}</h4>
-                    <p class="text-muted">{% trans "Competitive pricing without compromising on quality and service." %}</p>
+                    <h4>Доступные цены</h4>
+                    <p class="text-muted">Конкурентные цены без компромиссов в качестве и обслуживании.</p>
                 </div>
             </div>
         </div>
@@ -82,11 +81,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">{% trans "About Our Company" %}</h2>
-                <p class="text-muted mb-3">{% trans "Intercom Company has been providing professional intercom solutions since 2010. We specialize in installation, maintenance, and modernization of intercom systems for residential buildings, offices, and industrial facilities." %}</p>
-                <p class="text-muted mb-4">{% trans "Our team consists of certified professionals who are committed to delivering high-quality service and customer satisfaction. We work with leading manufacturers to ensure you get the most reliable and innovative solutions." %}</p>
+                <h2 class="fw-bold mb-4">О нашей компании</h2>
+                <p class="text-muted mb-3">Интерком Компания предоставляет профессиональные решения домофонов с 2010 года. Мы специализируемся на установке, обслуживании и модернизации систем домофонов для жилых зданий, офисов и промышленных объектов.</p>
+                <p class="text-muted mb-4">Наша команда состоит из сертифицированных специалистов, которые стремятся предоставлять высококачественный сервис и удовлетворённость клиентов. Мы работаем с ведущими производителями, чтобы обеспечить вас самыми надёжными и инновационными решениями.</p>
                 <a href="{% url 'news:list' %}" class="btn btn-outline-primary">
-                    <i class="bi bi-newspaper me-2"></i>{% trans "Read Our News" %}
+                    <i class="bi bi-newspaper me-2"></i>Читать наши новости
                 </a>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
@@ -94,25 +93,25 @@
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">14+</h3>
-                            <p class="text-muted mb-0">{% trans "Years Experience" %}</p>
+                            <p class="text-muted mb-0">Лет опыта</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">5000+</h3>
-                            <p class="text-muted mb-0">{% trans "Happy Clients" %}</p>
+                            <p class="text-muted mb-0">Довольных клиентов</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">100+</h3>
-                            <p class="text-muted mb-0">{% trans "Buildings" %}</p>
+                            <p class="text-muted mb-0">Зданий</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">24/7</h3>
-                            <p class="text-muted mb-0">{% trans "Support" %}</p>
+                            <p class="text-muted mb-0">Поддержка</p>
                         </div>
                     </div>
                 </div>
@@ -124,10 +123,10 @@
 <!-- CTA Section -->
 <section class="py-5 bg-primary text-white">
     <div class="container text-center">
-        <h2 class="mb-4">{% trans "Ready to Upgrade Your Security?" %}</h2>
-        <p class="lead mb-4">{% trans "Contact us today for a free consultation and quote." %}</p>
+        <h2 class="mb-4">Готовы улучшить свою безопасность?</h2>
+        <p class="lead mb-4">Свяжитесь с нами сегодня для бесплатной консультации и расчёта стоимости.</p>
         <a href="{% url 'applications:create' %}" class="btn btn-light btn-lg">
-            <i class="bi bi-pencil-square me-2"></i>{% trans "Submit Application" %}
+            <i class="bi bi-pencil-square me-2"></i>Отправить заявку
         </a>
         <a href="tel:+74951234567" class="btn btn-outline-light btn-lg ms-2">
             <i class="bi bi-telephone me-2"></i>+7 (495) 123-45-67

@@ -1,16 +1,15 @@
 {% extends 'base.html' %}
-{% load i18n %}
 
-{% block title %}{% trans "Applications" %} - Intercom Company{% endblock %}
-{% block meta_description %}{% trans "View and manage your service applications" %}{% endblock %}
+{% block title %}Заявки - Интерком Компания{% endblock %}
+{% block meta_description %}Просмотр и управление вашими заявками на услуги{% endblock %}
 
 {% block content %}
 <section class="py-5 bg-light">
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-5 fw-bold mb-3">{% trans "My Applications" %}</h1>
-                <p class="lead text-muted">{% trans "View and manage your service applications" %}</p>
+                <h1 class="display-5 fw-bold mb-3">Мои заявки</h1>
+                <p class="lead text-muted">Просмотр и управление вашими заявками на услуги</p>
             </div>
         </div>
 
@@ -26,12 +25,12 @@
                         </small>
                         <h5 class="card-title">{{ application.get_application_type_display }}</h5>
                         {% if application.service %}
-                        <p class="text-muted">{% trans "Service" %}: {{ application.service.title }}</p>
+                        <p class="text-muted">Услуга: {{ application.service.title }}</p>
                         {% endif %}
                         <p class="card-text flex-grow-1">
-                            <strong>{% trans "Name" %}:</strong> {{ application.name }}<br>
-                            <strong>{% trans "Phone" %}:</strong> {{ application.phone }}<br>
-                            <strong>{% trans "Email" %}:</strong> {{ application.email }}
+                            <strong>Имя:</strong> {{ application.name }}<br>
+                            <strong>Телефон:</strong> {{ application.phone }}<br>
+                            <strong>Email:</strong> {{ application.email }}
                         </p>
                         {% if application.message %}
                         <p class="text-muted small">{{ application.message|truncatewords:15 }}</p>
@@ -43,7 +42,7 @@
         </div>
 
         {% if is_paginated %}
-        <nav aria-label="{% trans 'Applications pagination' %}" class="mt-5">
+        <nav aria-label="Пагинация заявок" class="mt-5">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
@@ -85,10 +84,10 @@
             <div class="col-lg-8 mx-auto text-center">
                 <div class="alert alert-info">
                     <i class="bi bi-inbox"></i>
-                    {% trans "No applications yet. Create your first application!" %}
+                    Заявок пока нет. Создайте свою первую заявку!
                 </div>
                 <a href="{% url 'applications:create' %}" class="btn btn-primary mt-3">
-                    {% trans "Create application" %}
+                    Создать заявку
                 </a>
             </div>
         </div>
