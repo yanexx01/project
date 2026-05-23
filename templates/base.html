@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
 {% load static %}
-{% load i18n %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Intercom Company{% endblock %}</title>
+    <title>{% block title %}Интерком Компания{% endblock %}</title>
     
     <!-- Bootstrap 5 CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,7 +21,7 @@
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="/">
-                <i class="bi bi-building me-2"></i>Intercom Company
+                <i class="bi bi-building me-2"></i>Интерком Компания
             </a>
             
             <!-- Mobile Toggle -->
@@ -34,22 +33,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">{% trans "Home" %}</a>
+                        <a class="nav-link" href="/">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'services:list' %}">{% trans "Services" %}</a>
+                        <a class="nav-link" href="{% url 'services:list' %}">Услуги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'news:list' %}">{% trans "News" %}</a>
+                        <a class="nav-link" href="{% url 'news:list' %}">Новости</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'applications:list' %}">{% trans "Applications" %}</a>
+                        <a class="nav-link" href="{% url 'applications:list' %}">Заявки</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'debts:list' %}">{% trans "Debts" %}</a>
+                        <a class="nav-link" href="{% url 'debts:list' %}">Долги</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contacts:list' %}">{% trans "Contacts" %}</a>
+                        <a class="nav-link" href="{% url 'contacts:list' %}">Контакты</a>
                     </li>
                 </ul>
                 
@@ -77,22 +76,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5><i class="bi bi-building me-2"></i>Intercom Company</h5>
-                    <p class="text-muted">{% trans "Professional intercom systems and services for your security." %}</p>
+                    <h5><i class="bi bi-building me-2"></i>Интерком Компания</h5>
+                    <p class="text-muted">Профессиональные системы домофонов и услуги для вашей безопасности.</p>
                 </div>
                 <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5>{% trans "Quick Links" %}</h5>
+                    <h5>Быстрые ссылки</h5>
                     <ul class="list-unstyled">
-                        <li><a href="/">{% trans "Home" %}</a></li>
-                        <li><a href="{% url 'services:list' %}">{% trans "Services" %}</a></li>
-                        <li><a href="{% url 'news:list' %}">{% trans "News" %}</a></li>
-                        <li><a href="{% url 'contacts:list' %}">{% trans "Contacts" %}</a></li>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="{% url 'services:list' %}">Услуги</a></li>
+                        <li><a href="{% url 'news:list' %}">Новости</a></li>
+                        <li><a href="{% url 'contacts:list' %}">Контакты</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
-                    <h5>{% trans "Contact Us" %}</h5>
+                    <h5>Свяжитесь с нами</h5>
                     <ul class="list-unstyled text-muted">
-                        <li><i class="bi bi-geo-alt me-2"></i>{% trans "Moscow, Russia" %}</li>
+                        <li><i class="bi bi-geo-alt me-2"></i>Москва, Россия</li>
                         <li><i class="bi bi-envelope me-2"></i>info@intercom-company.ru</li>
                         <li><i class="bi bi-telephone me-2"></i>+7 (495) 123-45-67</li>
                     </ul>
@@ -109,11 +108,11 @@
             <hr class="my-4 bg-secondary">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0 text-muted">&copy; {% now "Y" %} Intercom Company. {% trans "All rights reserved." %}</p>
+                    <p class="mb-0 text-muted">&copy; {% now "Y" %} Интерком Компания. Все права защищены.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <a href="#" class="text-muted me-3">{% trans "Privacy Policy" %}</a>
-                    <a href="#" class="text-muted">{% trans "Terms of Service" %}</a>
+                    <a href="#" class="text-muted me-3">Политика конфиденциальности</a>
+                    <a href="#" class="text-muted">Условия использования</a>
                 </div>
             </div>
         </div>
