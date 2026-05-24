@@ -1,12 +1,264 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}Новая заявка - Интерком Компания{% endblock %}
+{% block title %}Подать заявку - Интерком Компания{% endblock %}
+
+{% block extra_css %}
+<style>
+    .application-section {
+        padding: 4rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        min-height: calc(100vh - 200px);
+    }
+
+    .application-form-container {
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 10px 40px rgba(0,0,0,.1);
+        padding: 3rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .application-title {
+        font-weight: 700;
+        color: #212529;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .application-subtitle {
+        color: #6c757d;
+        text-align: center;
+        margin-bottom: 2.5rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #495057;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control, .form-select {
+        padding: 0.75rem 1rem;
+        border: 2px solid #e9ecef;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        background: var(--primary-color);
+        border: none;
+        border-radius: 0.5rem;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+    }
+
+    .btn-submit:hover {
+        background: var(--accent-color);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+    }
+
+    .required-field::after {
+        content: " *";
+        color: #dc3545;
+    }
+
+    .info-box {
+        background: #e7f3ff;
+        border-left: 4px solid var(--primary-color);
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .info-box p {
+        margin: 0;
+        color: #084298;
+        font-size: 0.95rem;
+    }
+
+    .contact-info {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .contact-info h6 {
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #495057;
+    }
+
+    .contact-info p {
+        margin: 0.5rem 0;
+        color: #6c757d;
+    }
+
+    .contact-info a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .contact-info a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .application-form-container {
+            padding: 2rem 1.5rem;
+        }
+
+        .application-section {
+            padding: 2rem 0;
+        }
+    }
+</style>
+{% endblock %}
 
 {% block content %}
-<section class="py-5">
+<section class="application-section">
     <div class="container">
-        <h1 class="mb-4">Отправить новую заявку</h1>
-        <p class="lead text-muted">Заполните форму для запроса наших услуг</p>
+        <div class="application-form-container">
+            <h1 class="application-title">Подать заявку</h1>
+            <p class="application-subtitle">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+
+            <div class="info-box">
+                <p><strong>Важно:</strong> Поля, отмеченные звездочкой (*), обязательны для заполнения. Наш специалист свяжется с вами в течение 24 часов.</p>
+            </div>
+
+            <form method="post" id="applicationForm" novalidate>
+                {% csrf_token %}
+
+                <div class="mb-4">
+                    <label for="application_type" class="form-label required-field">Тип заявки</label>
+                    <select class="form-select" id="application_type" name="application_type" required>
+                        <option value="">Выберите тип заявки</option>
+                        <option value="consultation">Консультация</option>
+                        <option value="service">Услуга</option>
+                    </select>
+                    <div class="invalid-feedback">Пожалуйста, выберите тип заявки</div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="service" class="form-label">Услуга</label>
+                    <select class="form-select" id="service" name="service">
+                        <option value="">Выберите услугу (необязательно)</option>
+                        {% for service in services %}
+                        <option value="{{ service.id }}">{{ service.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="form-label required-field">Ваше имя</label>
+                    <input type="text" class="form-control" id="name" name="name" 
+                           placeholder="Введите ваше имя" required maxlength="100">
+                    <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="phone" class="form-label required-field">Телефон</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" 
+                           placeholder="+7 (___) ___-__-__" required maxlength="20">
+                    <div class="invalid-feedback">Пожалуйста, введите номер телефона</div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="form-label required-field">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" 
+                           placeholder="example@mail.ru" required>
+                    <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="message" class="form-label">Сообщение</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" 
+                              placeholder="Опишите вашу задачу или вопрос (необязательно)"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                    Отправить заявку
+                </button>
+            </form>
+
+            <div class="contact-info">
+                <h6>Нужна срочная помощь?</h6>
+                <p>Позвоните нам прямо сейчас:</p>
+                <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+                <p>Или напишите: <a href="mailto:info@intercom-company.ru">info@intercom-company.ru</a></p>
+            </div>
+        </div>
     </div>
 </section>
 {% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('applicationForm');
+    const phoneInput = document.getElementById('phone');
+
+    // Маска для телефона
+    phoneInput.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        
+        if (value.length > 0) {
+            if (value[0] === '7' || value[0] === '8') {
+                value = value.substring(1);
+            }
+            
+            let formatted = '+7';
+            if (value.length > 0) {
+                formatted += ' (' + value.substring(0, 3);
+            }
+            if (value.length >= 3) {
+                formatted += ') ' + value.substring(3, 6);
+            }
+            if (value.length >= 6) {
+                formatted += '-' + value.substring(6, 8);
+            }
+            if (value.length >= 8) {
+                formatted += '-' + value.substring(8, 10);
+            }
+            
+            e.target.value = formatted;
+        }
+    });
+
+    // Валидация формы
+    form.addEventListener('submit', function(event) {
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        
+        form.classList.add('was-validated');
+    });
+
+    // Очистка ошибок при вводе
+    const inputs = form.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('input', function() {
+            if (this.classList.contains('is-invalid')) {
+                this.classList.remove('is-invalid');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
+
