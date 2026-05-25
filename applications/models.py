@@ -8,6 +8,7 @@ class Application(models.Model):
     class ApplicationType(models.TextChoices):
         CONSULTATION = 'consultation', _('Консультация')
         SERVICE = 'service', _('Услуга')
+        COMPLAINT = 'complaint', _('Жалоба')
 
     application_type = models.CharField(
         max_length=20,

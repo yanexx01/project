@@ -149,6 +149,7 @@
                         <option value="">Выберите тип заявки</option>
                         <option value="consultation">Консультация</option>
                         <option value="service">Услуга</option>
+                        <option value="complaint">Жалоба</option>
                     </select>
                     <div class="invalid-feedback">Пожалуйста, выберите тип заявки</div>
                 </div>
@@ -158,7 +159,7 @@
                     <select class="form-select" id="service" name="service">
                         <option value="">Выберите услугу (необязательно)</option>
                         {% for service in services %}
-                        <option value="{{ service.id }}">{{ service.name }}</option>
+                            <option value="{{ service.id }}">{{ service.title }}</option>
                         {% endfor %}
                     </select>
                 </div>
