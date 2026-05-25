@@ -1,4 +1,4 @@
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, TemplateView
 from django.urls import reverse_lazy
 from applications.models import Application
 
@@ -15,4 +15,8 @@ class ApplicationCreateView(CreateView):
     model = Application
     template_name = 'applications/application_form.html'
     fields = ['application_type', 'service', 'name', 'phone', 'email', 'message']
-    success_url = reverse_lazy('applications:application_list')
+    success_url = reverse_lazy('applications:success')
+
+
+class ApplicationSuccessView(TemplateView):
+    template_name = 'applications/application_success.html'

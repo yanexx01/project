@@ -258,6 +258,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Отметить что форма была посещена
+    sessionStorage.setItem('applicationFormVisited', 'true');
+});
+
+// Очистка формы при возврате через "Назад"
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        const form = document.getElementById('applicationForm');
+        form.reset();
+        form.classList.remove('was-validated');
+    }
 });
 </script>
 {% endblock %}

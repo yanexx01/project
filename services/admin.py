@@ -1,9 +1,10 @@
 from django.contrib import admin
 from .models import ServiceCategory, Service
+from modeltranslation.admin import TabbedTranslationAdmin
 
 
 @admin.register(ServiceCategory)
-class ServiceCategoryAdmin(admin.ModelAdmin):
+class ServiceCategoryAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'slug')
     search_fields = ('title',)
     prepopulated_fields = {'slug': ('title',)}
@@ -11,7 +12,7 @@ class ServiceCategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(Service)
-class ServiceAdmin(admin.ModelAdmin):
+class ServiceAdmin(TabbedTranslationAdmin):
     list_display = ('title', 'category', 'price', 'created_at')
     list_filter = ('category', 'created_at')
     search_fields = ('title', 'description', 'category__title')
