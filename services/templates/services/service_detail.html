@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ service.title }} - Услуги{% endblock %}
+{% block meta_description %}{{ service.short_description }}{% endblock %}
+
+{% block content %}
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <article class="card border-0 shadow-sm mb-4">
+                    {% if service.image %}
+                    <img src="{{ service.image.url }}" class="card-img-top" alt="{{ service.title }}" style="max-height: 400px; object-fit: cover;">
+                    {% endif %}
+                    <div class="card-body p-4 p-md-5">
+                        <small class="text-muted d-block mb-2">
+                            <i class="bi bi-tag"></i>
+                            {{ service.category.title }}
+                        </small>
+                        <h1 class="display-6 fw-bold mb-3">{{ service.title }}</h1>
+                        <p class="fw-bold text-primary fs-4 mb-4">${{ service.price }}</p>
+                        <div class="content-text">
+                            {{ service.description|linebreaks }}
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Back button -->
+                <a href="{% url 'services:list' %}" class="btn btn-outline-primary">
+                    <i class="bi bi-arrow-left"></i>
+                    Назад к списку услуг
+                </a>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <div class="sticky-top" style="top: 100px;">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-bottom-0 pt-4 px-4">
+                            <h5 class="mb-0 fw-bold">Другие услуги</h5>
+                        </div>
+                        <div class="card-body p-0">
+                            {% if latest_services %}
+                            <ul class="list-group list-group-flush">
+                                {% for item in latest_services %}
+                                <li class="list-group-item border-0 px-4 py-3">
+                                    <a href="{% url 'services:detail' slug=item.slug %}" class="text-decoration-none">
+                                        <h6 class="mb-1">{{ item.title }}</h6>
+                                        <small class="text-muted">
+                                            <i class="bi bi-tag"></i>
+                                            {{ item.category.title }}
+                                        </small>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            <div class="p-4 text-center text-muted">
+                                <small>Других услуг пока нет</small>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
