@@ -9,6 +9,19 @@ class ServiceListView(ListView):
     paginate_by = 10
     ordering = ['-created_at']
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Добавляем параметры GET для пагинации (кроме page)
+        request = self.request
+        get_params = '&' + request.GET.urlencode() if request.GET else ''
+        # Удаляем параметр page из get_params, если он есть
+        if 'page' in request.GET:
+            params = request.GET.copy()
+            params.pop('page', None)
+            get_params = '&' + params.urlencode() if params else ''
+        context['get_params'] = get_params
+        return context
+
 
 class ServiceDetailView(DetailView):
     model = Service
