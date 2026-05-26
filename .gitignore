@@ -1,52 +1,48 @@
-```gitignore
-# Python compiled files
-*.pyc
+```
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# Django migrations cache
-**/migrations/__pycache__/
-
-# Logs
-*.log
-
-# Environment variables
+# Environment
 .env
 .env.local
 .env.*
+.venv/
+venv/
+ENV/
 
 # IDE
 .vscode/
 .idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Temporary files
-*.tmp
 *.swp
 *.swo
+*.tmp
 
-# Dependencies
-.venv/
-venv/
-node_modules/
-.mypy_cache/
-.pytest_cache/
-dist/
-build/
-target/
-.gradle/
+# Logs
+*.log
 
-# DB
-*.sqlite3
-
-# Static files
-media/
-staticfiles/
+# Coverage
+.coverage
+htmlcov/
+.coverage.*
+.coverage.xml
 ```
