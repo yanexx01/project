@@ -1,87 +1,144 @@
 {% comment %}
-Шаблон пагинации с поддержкой GET-параметров
+Шаблон компактной пагинации с поддержкой GET-параметров
 Использование: {% include 'includes/pagination.html' with page_obj=page_obj %}
 {% endcomment %}
 
 {% if is_paginated %}
-<nav aria-label="Пагинация" class="mt-5">
-    <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            <small class="text-muted">
-                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
-                {% if page_obj.paginator.count %}
-                    (всего {{ page_obj.paginator.count }} записей)
-                {% endif %}
-            </small>
-        </div>
-        <div class="col-md-6">
-            <ul class="pagination justify-content-center justify-content-md-end mb-0">
-                {# Кнопка "В начало" #}
-                {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a class="page-link d-none d-sm-block" href="?page=1{{ get_params }}" aria-label="Первая страница">
-                        <span aria-hidden="true">&laquo;&laquo;</span>
-                    </a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <span class="page-link d-none d-sm-block" aria-hidden="true">&laquo;&laquo;</span>
-                </li>
-                {% endif %}
+<nav aria-label="Пагинация" class="mt-5 mx-auto" style="max-width: 600px;">
+    <div class="d-flex flex-column align-items-center gap-3">
+        
+        {# Единый блок управления страницами #}
+        <div class="d-flex align-items-center justify-content-center flex-wrap gap-2 bg-white p-2 rounded-4 shadow-sm border">
+            
+            {# Кнопка "В начало" #}
+            {% if page_obj.has_previous %}
+            <a class="btn btn-sm btn-icon hover-shadow" href="?page=1{{ get_params }}" aria-label="Первая страница" title="Первая страница">
+                <i class="bi bi-chevron-double-left"></i>
+            </a>
+            {% else %}
+            <button class="btn btn-sm btn-icon text-muted opacity-50 cursor-not-allowed" disabled><i class="bi bi-chevron-double-left"></i></button>
+            {% endif %}
 
-                {# Кнопка "Назад" #}
-                {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}{{ get_params }}" aria-label="Предыдущая страница">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&laquo;</span>
-                </li>
-                {% endif %}
+            {# Кнопка "Назад" #}
+            {% if page_obj.has_previous %}
+            <a class="btn btn-sm btn-icon hover-shadow" href="?page={{ page_obj.previous_page_number }}{{ get_params }}" aria-label="Предыдущая страница" title="Предыдущая страница">
+                <i class="bi bi-chevron-left"></i>
+            </a>
+            {% else %}
+            <button class="btn btn-sm btn-icon text-muted opacity-50 cursor-not-allowed" disabled><i class="bi bi-chevron-left"></i></button>
+            {% endif %}
 
-                {# Номера страниц #}
+            {# Номера страниц с троеточиями #}
+            <div class="d-flex align-items-center gap-1">
                 {% for num in page_obj.paginator.page_range %}
                     {% if page_obj.number == num %}
-                    <li class="page-item active" aria-current="page">
-                        <span class="page-link">{{ num }}</span>
-                    </li>
+                        <span class="btn btn-sm btn-primary fw-bold rounded-3 current-page-btn">{{ num }}</span>
                     {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                    <li class="page-item">
-                        <a class="page-link" href="?page={{ num }}{{ get_params }}">{{ num }}</a>
-                    </li>
+                        <a class="btn btn-sm btn-light hover-shadow rounded-3 page-num-btn" href="?page={{ num }}{{ get_params }}">{{ num }}</a>
+                    {% elif num == 1 %}
+                        <a class="btn btn-sm btn-light hover-shadow rounded-3 page-num-btn" href="?page={{ num }}{{ get_params }}">{{ num }}</a>
+                        {% if page_obj.number|add:'-3' > 2 %}
+                            <span class="text-muted px-1">...</span>
+                        {% endif %}
+                    {% elif num == page_obj.paginator.num_pages %}
+                        {% if page_obj.number|add:'3' < page_obj.paginator.num_pages %}
+                            <span class="text-muted px-1">...</span>
+                        {% endif %}
+                        <a class="btn btn-sm btn-light hover-shadow rounded-3 page-num-btn" href="?page={{ num }}{{ get_params }}">{{ num }}</a>
                     {% endif %}
                 {% endfor %}
+            </div>
 
-                {# Кнопка "Вперед" #}
-                {% if page_obj.has_next %}
-                <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.next_page_number }}{{ get_params }}" aria-label="Следующая страница">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <span class="page-link" aria-hidden="true">&raquo;</span>
-                </li>
-                {% endif %}
+            {# Кнопка "Вперед" #}
+            {% if page_obj.has_next %}
+            <a class="btn btn-sm btn-icon hover-shadow" href="?page={{ page_obj.next_page_number }}{{ get_params }}" aria-label="Следующая страница" title="Следующая страница">
+                <i class="bi bi-chevron-right"></i>
+            </a>
+            {% else %}
+            <button class="btn btn-sm btn-icon text-muted opacity-50 cursor-not-allowed" disabled><i class="bi bi-chevron-right"></i></button>
+            {% endif %}
 
-                {# Кнопка "В конец" #}
-                {% if page_obj.has_next %}
-                <li class="page-item">
-                    <a class="page-link d-none d-sm-block" href="?page={{ page_obj.paginator.num_pages }}{{ get_params }}" aria-label="Последняя страница">
-                        <span aria-hidden="true">&raquo;&raquo;</span>
-                    </a>
-                </li>
-                {% else %}
-                <li class="page-item disabled">
-                    <span class="page-link d-none d-sm-block" aria-hidden="true">&raquo;&raquo;</span>
-                </li>
-                {% endif %}
-            </ul>
+            {# Кнопка "В конец" #}
+            {% if page_obj.has_next %}
+            <a class="btn btn-sm btn-icon hover-shadow" href="?page={{ page_obj.paginator.num_pages }}{{ get_params }}" aria-label="Последняя страница" title="Последняя страница">
+                <i class="bi bi-chevron-double-right"></i>
+            </a>
+            {% else %}
+            <button class="btn btn-sm btn-icon text-muted opacity-50 cursor-not-allowed" disabled><i class="bi bi-chevron-double-right"></i></button>
+            {% endif %}
         </div>
+
+        {# Информация о записях (снизу, ненавязчиво) #}
+        {% if page_obj.paginator.count %}
+        <div class="text-center">
+            <small class="text-muted bg-white px-3 py-1 rounded-pill border shadow-xs">
+                Страница <strong class="text-dark">{{ page_obj.number }}</strong> из {{ page_obj.paginator.num_pages }} 
+                <span class="text-muted mx-1">|</span> Всего записей: <strong class="text-dark">{{ page_obj.paginator.count }}</strong>
+            </small>
+        </div>
+        {% endif %}
+        
+        {# Тонкий аккуратный прогресс-бар #}
+        <div class="w-100 px-4" style="max-width: 320px;">
+            <div class="progress" style="height: 3px;" role="progressbar" 
+                 aria-valuenow="{{ page_obj.number }}" 
+                 aria-valuemin="1" 
+                 aria-valuemax="{{ page_obj.paginator.num_pages }}">
+                <div class="progress-bar bg-primary gradient-animate" 
+                     style="width: {{ progress_percent }}%;"></div>
+            </div>
+        </div>
+
     </div>
 </nav>
+
+<style>
+/* Стили для аккуратных квадратных/круглых кнопок */
+.btn-icon {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #495057;
+    border: 1px solid transparent;
+    background: transparent;
+}
+.btn-icon:hover:not([disabled]) {
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+.page-num-btn, .current-page-btn {
+    min-width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 6px;
+}
+.hover-shadow {
+    transition: all 0.2s ease-in-out;
+}
+.hover-shadow:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08) !important;
+}
+.cursor-not-allowed {
+    cursor: not-allowed;
+}
+.gradient-animate {
+    background: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.shadow-xs {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+</style>
 {% endif %}
