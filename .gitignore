@@ -1,34 +1,52 @@
-```
-# Python
-__pycache__/
+```gitignore
+# Python compiled files
 *.pyc
-*.pyo
-*.pyd
+__pycache__/
 
-# Django
+# Django migrations cache
+**/migrations/__pycache__/
+
+# Logs
 *.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
-# Dependencies
-venv/
-.venv/
-env/
-ENV/
+# Environment variables
+.env
+.env.local
+.env.*
 
 # IDE
 .vscode/
 .idea/
-*.swp
-*.swo
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Environment
-.env
-.env.local
-*.env.*
+# Coverage reports
+coverage/
+htmlcov/
+.coverage
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Dependencies
+.venv/
+venv/
+node_modules/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+target/
+.gradle/
+
+# DB
+*.sqlite3
+
+# Static files
+media/
+staticfiles/
 ```
