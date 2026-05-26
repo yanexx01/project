@@ -28,7 +28,14 @@
                         </small>
                         <h5 class="card-title">{{ service.title }}</h5>
                         <p class="card-text text-muted flex-grow-1">{{ service.short_description|truncatewords:20 }}</p>
-                        <p class="fw-bold text-primary">${{ service.price }}</p>
+                        <div class="fw-bold text-primary">
+                            {% if service.price %}
+                                <span class="price-value">{{ service.price|floatformat:0 }}</span> 
+                                <span class="price-unit">{{ service.price_unit }}</span>
+                            {% else %}
+                                <span class="price-value">Цена по запросу</span>
+                            {% endif %}
+                        </div>
                         <a href="{% url 'services:detail' slug=service.slug %}" class="btn btn-outline-primary mt-3">
                             Узнать больше
                         </a>

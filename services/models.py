@@ -51,7 +51,16 @@ class Service(models.Model):
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2,
-        verbose_name='Цена'
+        verbose_name='Цена',
+        null=True,
+        blank=True
+    )
+    price_unit = models.CharField(
+        max_length=50,
+        verbose_name='Единица измерения цены',
+        null=True,
+        blank=True,
+        help_text='руб./услуга, руб./месяц и т.д.'
     )
     image = models.ImageField(
         upload_to='services/',
