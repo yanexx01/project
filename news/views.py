@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView
 from news.models import News
+from django.http import HttpRequest
 
 
 class NewsListView(ListView):
@@ -8,6 +9,19 @@ class NewsListView(ListView):
     context_object_name = 'news_list'
     paginate_by = 10
     ordering = ['-published_at']
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Добавляем параметры GET для пагинации (кроме page)
+        request = self.request
+        get_params = '&' + request.GET.urlencode() if request.GET else ''
+        # Удаляем параметр page из get_params, если он есть
+        if 'page' in request.GET:
+            params = request.GET.copy()
+            params.pop('page', None)
+            get_params = '&' + params.urlencode() if params else ''
+        context['get_params'] = get_params
+        return context
 
 
 class NewsDetailView(DetailView):
