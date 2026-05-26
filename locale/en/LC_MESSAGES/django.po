@@ -1,0 +1,90 @@
+# English translations for the project.
+# Copyright (C) 2026 THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# , 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-05-26 19:52+0300\n"
+"PO-Revision-Date: 2026-05-26 19:52+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: applications/models.py:9
+msgid "Консультация"
+msgstr "Consultation"
+
+#: applications/models.py:10
+msgid "Услуга"
+msgstr "Service"
+
+#: applications/models.py:11
+msgid "Жалоба"
+msgstr "Complaint"
+
+#: mysite/settings.py:133
+msgid "Russian"
+msgstr "Russian"
+
+#: mysite/settings.py:134
+msgid "English"
+msgstr "English"
+
+#: templates/base.html:8 templates/base.html:25 templates/base.html:78
+msgid "ИП Александров С.А."
+msgstr "IP Aleksandrov S.A."
+
+#: templates/base.html:37 templates/base.html:84
+msgid "Главная"
+msgstr "Home"
+
+#: templates/base.html:40 templates/base.html:85
+msgid "Услуги"
+msgstr "Services"
+
+#: templates/base.html:43 templates/base.html:86
+msgid "Новости"
+msgstr "News"
+
+#: templates/base.html:47 templates/base.html:87
+msgid "Задолженности"
+msgstr "Debts"
+
+#: templates/base.html:50 templates/base.html:88
+msgid "Контакты"
+msgstr "Contacts"
+
+#: templates/base.html:79
+msgid "Профессиональные системы домофонов и услуги для вашей безопасности."
+msgstr "Professional intercom systems and services for your security."
+
+#: templates/base.html:82
+msgid "Быстрые ссылки"
+msgstr "Quick Links"
+
+#: templates/base.html:92
+msgid "Свяжитесь с нами"
+msgstr "Contact Us"
+
+#: templates/base.html:94
+msgid "п-ов Крым, г. Евпатория"
+msgstr "Crimea Peninsula, Yevpatoriya"
+
+#: templates/base.html:111
+msgid "ИП Александров С.А. Все права защищены."
+msgstr "IP Aleksandrov S.A. All rights reserved."
+
+#: templates/base.html:114
+msgid "Политика конфиденциальности"
+msgstr "Privacy Policy"
+
+#: templates/base.html:115
+msgid "Условия использования"
+msgstr "Terms of Use"

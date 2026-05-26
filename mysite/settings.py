@@ -60,6 +60,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+MODELTRANSLATION_LANGUAGES = ('ru', 'en')
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('ru', 'en')
+
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [

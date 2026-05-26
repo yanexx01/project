@@ -18,16 +18,45 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.utils.translation import gettext_lazy as _
+
+# Language-prefixed URL patterns
+lang_prefixes = {
+    'ru': '',  # Default language has no prefix
+    'en': 'en/',
+}
+
+# Create language-specific urlpatterns
+def create_lang_urlpatterns():
+    urlpatterns = []
+    
+    # Default language (Russian) - no prefix
+    urlpatterns.extend([
+        path('', include('home.urls')),
+        path('services/', include('services.urls')),
+        path('news/', include('news.urls')),
+        path('applications/', include('applications.urls')),
+        path('debts/', include('debts.urls')),
+        path('contacts/', include('contacts.urls')),
+    ])
+    
+    # English with prefix
+    urlpatterns.extend([
+        path('en/', include([
+            path('', include('home.urls')),
+            path('services/', include('services.urls')),
+            path('news/', include('news.urls')),
+            path('applications/', include('applications.urls')),
+            path('debts/', include('debts.urls')),
+            path('contacts/', include('contacts.urls')),
+        ])),
+    ])
+    
+    return urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('services/', include('services.urls')),
-    path('news/', include('news.urls')),
-    path('applications/', include('applications.urls')),
-    path('debts/', include('debts.urls')),
-    path('contacts/', include('contacts.urls')),
-]
+] + create_lang_urlpatterns()
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
