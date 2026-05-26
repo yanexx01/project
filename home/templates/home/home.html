@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Главная{% endblock %}
+{% block title %}{% trans "Главная" %}{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -8,13 +9,13 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h1 class="hero-title display-5">Современные решения домофонов для вашей безопасности</h1>
-                <p class="hero-lead">Профессиональная установка, обслуживание и ремонт систем домофонных систем по всей Евпатории.</p>
+                <h1 class="hero-title display-5">{% trans "Современные решения домофонов для вашей безопасности" %}</h1>
+                <p class="hero-lead">{% trans "Профессиональная установка, обслуживание и ремонт систем домофонных систем по всей Евпатории." %}</p>
                 <a href="{% url 'services:list' %}" class="btn btn-primary btn-lg">
-                    <i class="bi bi-tools me-2"></i>Наши услуги
+                    <i class="bi bi-tools me-2"></i>{% trans "Наши услуги" %}
                 </a>
                 <a href="{% url 'contacts:list' %}" class="btn btn-outline-secondary btn-lg ms-2">
-                    <i class="bi bi-envelope me-2"></i>Свяжитесь с нами
+                    <i class="bi bi-envelope me-2"></i>{% trans "Свяжитесь с нами" %}
                 </a>
             </div>
             <div class="col-lg-6 text-center mt-4 mt-lg-0">
@@ -28,8 +29,8 @@
 <section class="features-section bg-light">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Почему выбирают нас</h2>
-            <p class="text-muted">Мы предоставляем лучшие решения домофонов для ваших нужд</p>
+            <h2 class="fw-bold">{% trans "Почему выбирают нас" %}</h2>
+            <p class="text-muted">{% trans "Мы предоставляем лучшие решения домофонов для ваших нужд" %}</p>
         </div>
         
         <div class="row g-4">
@@ -38,38 +39,38 @@
                     <div class="feature-icon">
                         <i class="bi bi-shield-check"></i>
                     </div>
-                    <h4>Надёжная безопасность</h4>
-                    <p class="text-muted">Современные системы контроля доступа для защиты вашего имущества и близких.</p>
+                    <h4>{% trans "Надёжная безопасность" %}</h4>
+                    <p class="text-muted">{% trans "Современные системы контроля доступа для защиты вашего имущества и близких." %}</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3">
                 <div class="feature-card bg-white shadow-sm">
                     <div class="feature-icon">
                         <i class="bi bi-gear-wide-connected"></i>
                     </div>
-                    <h4>Профессиональная установка</h4>
-                    <p class="text-muted">Сертифицированные специалисты с многолетним опытом работы с домофонными системами.</p>
+                    <h4>{% trans "Профессиональная установка" %}</h4>
+                    <p class="text-muted">{% trans "Сертифицированные специалисты с многолетним опытом работы с домофонными системами." %}</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3">
                 <div class="feature-card bg-white shadow-sm">
                     <div class="feature-icon">
                         <i class="bi bi-clock-history"></i>
                     </div>
-                    <h4>Поддержка 24/7</h4>
-                    <p class="text-muted">Круглосуточная техническая поддержка и аварийный ремонт.</p>
+                    <h4>{% trans "Поддержка 24/7" %}</h4>
+                    <p class="text-muted">{% trans "Круглосуточная техническая поддержка и аварийный ремонт." %}</p>
                 </div>
             </div>
-            
+
             <div class="col-md-6 col-lg-3">
                 <div class="feature-card bg-white shadow-sm">
                     <div class="feature-icon">
                         <i class="bi bi-wallet2"></i>
                     </div>
-                    <h4>Доступные цены</h4>
-                    <p class="text-muted">Конкурентные цены без компромиссов в качестве и обслуживании.</p>
+                    <h4>{% trans "Доступные цены" %}</h4>
+                    <p class="text-muted">{% trans "Конкурентные цены без компромиссов в качестве и обслуживании." %}</p>
                 </div>
             </div>
         </div>
@@ -81,11 +82,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">О нас</h2>
-                <p class="text-muted mb-3">ИП Александров С. А. предоставляет профессиональные решения домофонов с 2008 года. Мы специализируемся на установке, обслуживании и модернизации систем домофонов для жилых зданий, офисов и промышленных объектов.</p>
-                <p class="text-muted mb-4">Наша команда состоит из сертифицированных специалистов, которые стремятся предоставлять высококачественный сервис и удовлетворённость клиентов. Мы работаем с ведущими производителями, чтобы обеспечить вас самыми надёжными и инновационными решениями.</p>
+                <h2 class="fw-bold mb-4">{% trans "О нас" %}</h2>
+                <p class="text-muted mb-3">{% trans "ИП Александров С. А. предоставляет профессиональные решения домофонов с 2008 года. Мы специализируемся на установке, обслуживании и модернизации систем домофонов для жилых зданий, офисов и промышленных объектов." %}</p>
+                <p class="text-muted mb-4">{% trans "Наша команда состоит из сертифицированных специалистов, которые стремятся предоставлять высококачественный сервис и удовлетворённость клиентов. Мы работаем с ведущими производителями, чтобы обеспечить вас самыми надёжными и инновационными решениями." %}</p>
                 <a href="{% url 'news:list' %}" class="btn btn-outline-primary">
-                    <i class="bi bi-newspaper me-2"></i>Новости
+                    <i class="bi bi-newspaper me-2"></i>{% trans "Новости" %}
                 </a>
             </div>
             <div class="col-lg-6 mt-4 mt-lg-0">
@@ -93,25 +94,25 @@
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">18+</h3>
-                            <p class="text-muted mb-0">Лет опыта</p>
+                            <p class="text-muted mb-0">{% trans "Лет опыта" %}</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">5000+</h3>
-                            <p class="text-muted mb-0">Абонентов</p>
+                            <p class="text-muted mb-0">{% trans "Абонентов" %}</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">100+</h3>
-                            <p class="text-muted mb-0">Адресов</p>
+                            <p class="text-muted mb-0">{% trans "Адресов" %}</p>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="text-center p-4 bg-light rounded">
                             <h3 class="display-4 fw-bold text-primary">24/7</h3>
-                            <p class="text-muted mb-0">Поддержка</p>
+                            <p class="text-muted mb-0">{% trans "Поддержка" %}</p>
                         </div>
                     </div>
                 </div>
@@ -123,10 +124,10 @@
 <!-- CTA Section -->
 <section class="py-5 bg-primary text-white">
     <div class="container text-center">
-        <h2 class="mb-4">Готовы улучшить свою безопасность?</h2>
-        <p class="lead mb-4">Свяжитесь с нами сегодня для бесплатной консультации и расчёта стоимости.</p>
+        <h2 class="mb-4">{% trans "Готовы улучшить свою безопасность?" %}</h2>
+        <p class="lead mb-4">{% trans "Свяжитесь с нами сегодня для бесплатной консультации и расчёта стоимости." %}</p>
         <a href="{% url 'applications:create' %}" class="btn btn-light btn-lg">
-            <i class="bi bi-pencil-square me-2"></i>Отправить заявку
+            <i class="bi bi-pencil-square me-2"></i>{% trans "Отправить заявку" %}
         </a>
         <a href="tel:+79780800706" class="btn btn-outline-light btn-lg ms-2">
             <i class="bi bi-telephone me-2"></i>+7 (978) 08-007-06

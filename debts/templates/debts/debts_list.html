@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Долги{% endblock %}
+{% block title %}{% trans "Долги" %}{% endblock %}
 {% block meta_description %}Просмотр ваших задолженностей{% endblock %}
 
 {% block content %}
@@ -12,8 +13,8 @@
                 <div class="alert alert-info border-0 shadow-sm d-flex align-items-center p-4" role="alert">
                     <i class="bi bi-info-circle-fill fs-3 me-3 text-info"></i>
                     <div>
-                        <h5 class="alert-heading mb-1">Уважаемые абоненты!</h5>
-                        <p class="mb-0">Оплату услуг домофона рекомендуется производить до 10 числа каждого месяца. Если у вас возникли вопросы по начислениям, оставьте заявку в разделе "Контакты".</p>
+                        <h5 class="alert-heading mb-1">{% trans "Уважаемые абоненты!" %}</h5>
+                        <p class="mb-0">{% trans "Оплату услуг домофона рекомендуется производить до 10 числа каждого месяца. Если у вас возникли вопросы по начислениям, оставьте заявку в разделе 'Контакты'." %}</p>
                     </div>
                 </div>
             </div>
@@ -21,7 +22,7 @@
 
         <div class="row mb-5">
             <div class="col-12 text-center">
-                <h1 class="display-5 fw-bold mb-3">Проверка задолженности</h1>
+                <h1 class="display-5 fw-bold mb-3">{% trans "Проверка задолженности" %}</h1>
             </div>
         </div>
 
@@ -30,16 +31,16 @@
                 <div class="position-sticky" style="top: 2rem;">
                     <form method="get" class="card border-0 shadow-sm p-4">
                         <div class="mb-3">
-                            <label for="account_number" class="form-label text-muted small text-uppercase fw-bold">Лицевой счёт</label>
+                            <label for="account_number" class="form-label text-muted small text-uppercase fw-bold">{% trans "Лицевой счёт" %}</label>
                             <input type="text" class="form-control form-control-lg" id="account_number" name="account_number"
-                                   placeholder="Например: 12345678" value="{{ account_number }}" required>
+                                   placeholder="{% trans 'Например: 12345678' %}" value="{{ account_number }}" required>
                         </div>
                         <div class="mb-4">
-                            <label for="last_name" class="form-label text-muted small text-uppercase fw-bold">Фамилия</label>
+                            <label for="last_name" class="form-label text-muted small text-uppercase fw-bold">{% trans "Фамилия" %}</label>
                             <input type="text" class="form-control form-control-lg" id="last_name" name="last_name"
-                                   placeholder="Иванов" value="{{ last_name }}" required>
+                                   placeholder="{% trans 'Иванов' %}" value="{{ last_name }}" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-lg w-100">Проверить</button>
+                        <button type="submit" class="btn btn-primary btn-lg w-100">{% trans "Проверить" %}</button>
                     </form>
                 </div>
             </div>
@@ -47,7 +48,7 @@
             <div class="col-lg-8">
                 {% if debts_list %}
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h4 class="mb-0">Результаты поиска</h4>
+                        <h4 class="mb-0">{% trans "Результаты поиска" %}</h4>
                         <!-- <span class="badge bg-secondary rounded-pill">Найдено: {{ page_obj.paginator.count }}</span> -->
                     </div>
 
@@ -67,17 +68,17 @@
                             
                             <div class="col-md-5 text-md-end">
                                 {% if debt.amount > 0 %}
-                                    <p class="text-muted small mb-1">Задолженность:</p>
+                                    <p class="text-muted small mb-1">{% trans "Задолженность:" %}</p>
                                     <p class="display-6 text-danger fw-bold mb-3">{{ debt.amount }} ₽</p>
                                     <a href="#" class="btn btn-danger w-100 fw-bold">
-                                        <i class="bi bi-credit-card me-2"></i>Оплатить онлайн
+                                        <i class="bi bi-credit-card me-2"></i>{% trans "Оплатить онлайн" %}
                                     </a>
                                 {% else %}
                                     <div class="d-inline-flex align-items-center text-success bg-success bg-opacity-10 px-3 py-2 rounded">
                                         <i class="bi bi-check-circle-fill me-2 fs-4"></i>
                                         <div class="text-start">
-                                            <p class="fw-bold mb-0">Оплачено</p>
-                                            <p class="small mb-0 text-muted">Задолженности нет</p>
+                                            <p class="fw-bold mb-0">{% trans "Оплачено" %}</p>
+                                            <p class="small mb-0 text-muted">{% trans "Задолженности нет" %}</p>
                                         </div>
                                     </div>
                                 {% endif %}
@@ -95,12 +96,12 @@
                         <div class="text-center text-muted p-5">
                             {% if is_searched %}
                                 <div class="display-1 mb-3 text-warning"><i class="bi bi-search"></i></div>
-                                <h4 class="text-dark">Лицевой счёт не найден</h4>
-                                <p>Проверьте правильность введенного лицевого счёта и фамилии.</p>
+                                <h4 class="text-dark">{% trans "Лицевой счёт не найден" %}</h4>
+                                <p>{% trans "Проверьте правильность введенного лицевого счёта и фамилии." %}</p>
                             {% else %}
                                 <div class="display-1 mb-3"><i class="bi bi-card-list"></i></div>
-                                <h4>Информация о долгах</h4>
-                                <p>Заполните форму слева, чтобы увидеть информацию о задолженностях по счёту.</p>
+                                <h4>{% trans "Информация о долгах" %}</h4>
+                                <p>{% trans "Заполните форму слева, чтобы увидеть информацию о задолженностях по счёту." %}</p>
                             {% endif %}
                         </div>
                     </div>
@@ -110,7 +111,7 @@
 
         <div class="row pt-5 border-top border-light-subtle">
             <div class="col-md-6 mb-4">
-                <h4 class="mb-4"><i class="bi bi-newspaper me-2 text-primary"></i>Последние новости</h4>
+                <h4 class="mb-4"><i class="bi bi-newspaper me-2 text-primary"></i>{% trans "Последние новости" %}</h4>
                 
                 {% for news_item in latest_news %}
                 <div class="card border-0 shadow-sm mb-3">
@@ -118,39 +119,39 @@
                         <h6 class="card-title fw-bold">{{ news_item.title }}</h6>
                         <p class="card-text text-muted small">{{ news_item.short_description }}</p>
                         <a href="{% url 'news:detail' slug=news_item.slug %}" class="text-decoration-none small fw-bold">
-                            Читать далее <i class="bi bi-arrow-right"></i>
+                            {% trans "Читать далее" %} <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
                 {% empty %}
-                <p class="text-muted small">Новостей пока нет.</p>
+                <p class="text-muted small">{% trans "Новостей пока нет." %}</p>
                 {% endfor %}
             </div>
-            
+
             <div class="col-md-6 mb-4">
-                <h4 class="mb-4"><i class="bi bi-question-circle me-2 text-primary"></i>Частые вопросы</h4>
+                <h4 class="mb-4"><i class="bi bi-question-circle me-2 text-primary"></i>{% trans "Частые вопросы" %}</h4>
                 <div class="accordion accordion-flush shadow-sm rounded" id="faqAccordion">
                     <div class="accordion-item border-0 rounded mb-1">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed rounded bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                Где найти номер лицевого счёта?
+                                {% trans "Где найти номер лицевого счёта?" %}
                             </button>
                         </h2>
                         <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small">
-                                Номер лицевого счёта указан в вашей бумажной квитанции в верхнем правом углу. Он состоит из 8 цифр.
+                                {% trans "Номер лицевого счёта указан в вашей бумажной квитанции в верхнем правом углу. Он состоит из 8 цифр." %}
                             </div>
                         </div>
                     </div>
                     <div class="accordion-item border-0 rounded">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed rounded bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                Как быстро обновляется информация об оплате?
+                                {% trans "Как быстро обновляется информация об оплате?" %}
                             </button>
                         </h2>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body text-muted small">
-                                При оплате онлайн через наш сайт данные обновляются мгновенно. При оплате через сторонние банки зачисление может занять до 3 рабочих дней.
+                                {% trans "При оплате онлайн через наш сайт данные обновляются мгновенно. При оплате через сторонние банки зачисление может занять до 3 рабочих дней." %}
                             </div>
                         </div>
                     </div>

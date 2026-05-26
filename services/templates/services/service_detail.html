@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}{{ service.title }} - Услуги{% endblock %}
 {% block meta_description %}{{ service.short_description }}{% endblock %}
@@ -29,7 +30,7 @@
                 <!-- Back button -->
                 <a href="{% url 'services:list' %}" class="btn btn-outline-primary">
                     <i class="bi bi-arrow-left"></i>
-                    Назад к списку услуг
+                    {% trans "Назад к списку услуг" %}
                 </a>
             </div>
 
@@ -38,7 +39,7 @@
                 <div class="sticky-top" style="top: 100px;">
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-header bg-white border-bottom-0 pt-4 px-4">
-                            <h5 class="mb-0 fw-bold">Другие услуги</h5>
+                            <h5 class="mb-0 fw-bold">{% trans "Другие услуги" %}</h5>
                         </div>
                         <div class="card-body p-0">
                             {% if latest_services %}
@@ -57,7 +58,7 @@
                             </ul>
                             {% else %}
                             <div class="p-4 text-center text-muted">
-                                <small>Других услуг пока нет</small>
+                                <small>{% trans "Других услуг пока нет" %}</small>
                             </div>
                             {% endif %}
                         </div>

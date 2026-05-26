@@ -1,0 +1,544 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-26 20:48+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\applications\models.py:9
+#: .\applications\templates\applications\application_form.html:151
+msgid "Консультация"
+msgstr ""
+
+#: .\applications\models.py:10
+#: .\applications\templates\applications\application_form.html:152
+#: .\applications\templates\applications\application_form.html:159
+msgid "Услуга"
+msgstr ""
+
+#: .\applications\models.py:11
+#: .\applications\templates\applications\application_form.html:153
+msgid "Жалоба"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:5
+#: .\applications\templates\applications\application_form.html:137
+msgid "Подать заявку"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:138
+msgid "Заполните форму, и мы свяжемся с вами в ближайшее время"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:141
+msgid "Важно:"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:141
+msgid ""
+"Поля, отмеченные звездочкой (*), обязательны для заполнения. Наш специалист "
+"свяжется с вами в течение 24 часов."
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:148
+msgid "Тип заявки"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:150
+msgid "Выберите тип заявки"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:155
+msgid "Пожалуйста, выберите тип заявки"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:161
+msgid "Выберите услугу (необязательно)"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:169
+msgid "Ваше имя"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:171
+msgid "Введите ваше имя"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:172
+msgid "Пожалуйста, введите ваше имя"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:176
+#: .\contacts\templates\contacts\contacts_list.html:24
+msgid "Телефон"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:179
+msgid "Пожалуйста, введите номер телефона"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:183
+#: .\contacts\templates\contacts\contacts_list.html:32
+msgid "Email"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:186
+msgid "Пожалуйста, введите корректный email"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:190
+msgid "Сообщение"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:192
+msgid "Опишите вашу задачу или вопрос (необязательно)"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:196
+#: .\home\templates\home\home.html:130
+msgid "Отправить заявку"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:201
+#: .\applications\templates\applications\application_success.html:52
+msgid "Нужна срочная помощь?"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:202
+msgid "Позвоните нам прямо сейчас:"
+msgstr ""
+
+#: .\applications\templates\applications\application_form.html:204
+msgid "Или напишите:"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:4
+msgid "Заявка отправлена"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:16
+msgid "Спасибо!"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:18
+msgid "Ваша заявка успешно отправлена"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:24
+msgid "Наш специалист свяжется с вами в течение 24 часов."
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:26
+msgid "Проверьте почту - мы отправим подтверждение на указанные контакты."
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:32
+msgid "Что дальше?"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:36
+msgid "Звонок:"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:36
+msgid "Специалист перезвонит на указанный номер"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:40
+msgid "Консультация:"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:40
+msgid "Обсудим детали и найдем лучшее решение"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:44
+msgid "Помощь:"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:44
+msgid "Быстро решим вашу задачу"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:55
+msgid "Позвоните нам:"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:60
+msgid "Напишите письмо"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:68
+msgid "На главную"
+msgstr ""
+
+#: .\applications\templates\applications\application_success.html:71
+#: .\home\templates\home\home.html:15
+#: .\services\templates\services\services_list.html:12
+msgid "Наши услуги"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:4 .\templates\base.html:50
+#: .\templates\base.html:88
+msgid "Контакты"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:9
+#: .\home\templates\home\home.html:18 .\templates\base.html:92
+msgid "Свяжитесь с нами"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:10
+msgid "Свяжитесь с нашей командой"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:16
+msgid "Адрес"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:17 .\templates\base.html:94
+msgid "п-ов Крым, г. Евпатория"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:40
+msgid "Часы работы"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:41
+msgid "Пн-Пт: 9:00 - 18:00"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:50
+msgid "Хотите оставить заявку?"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:51
+msgid "Заполните форму и мы свяжемся с вами в течение 24 часов"
+msgstr ""
+
+#: .\contacts\templates\contacts\contacts_list.html:53
+msgid "Оставить заявку"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:4
+msgid "Долги"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:16
+msgid "Уважаемые абоненты!"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:17
+msgid ""
+"Оплату услуг домофона рекомендуется производить до 10 числа каждого месяца. "
+"Если у вас возникли вопросы по начислениям, оставьте заявку в разделе "
+"'Контакты'."
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:25
+msgid "Проверка задолженности"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:34
+msgid "Лицевой счёт"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:36
+msgid "Например: 12345678"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:39
+msgid "Фамилия"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:41
+msgid "Иванов"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:43
+msgid "Проверить"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:51
+msgid "Результаты поиска"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:71
+msgid "Задолженность:"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:74
+msgid "Оплатить онлайн"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:80
+msgid "Оплачено"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:81
+msgid "Задолженности нет"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:99
+msgid "Лицевой счёт не найден"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:100
+msgid "Проверьте правильность введенного лицевого счёта и фамилии."
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:103
+msgid "Информация о долгах"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:104
+msgid ""
+"Заполните форму слева, чтобы увидеть информацию о задолженностях по счёту."
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:114
+#: .\news\templates\news\news_detail.html:41
+#: .\news\templates\news\news_list.html:12
+msgid "Последние новости"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:122
+#: .\news\templates\news\news_list.html:33
+msgid "Читать далее"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:127
+msgid "Новостей пока нет."
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:132
+msgid "Частые вопросы"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:137
+msgid "Где найти номер лицевого счёта?"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:142
+msgid ""
+"Номер лицевого счёта указан в вашей бумажной квитанции в верхнем правом "
+"углу. Он состоит из 8 цифр."
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:149
+msgid "Как быстро обновляется информация об оплате?"
+msgstr ""
+
+#: .\debts\templates\debts\debts_list.html:154
+msgid ""
+"При оплате онлайн через наш сайт данные обновляются мгновенно. При оплате "
+"через сторонние банки зачисление может занять до 3 рабочих дней."
+msgstr ""
+
+#: .\home\templates\home\home.html:4 .\templates\base.html:37
+#: .\templates\base.html:84
+msgid "Главная"
+msgstr ""
+
+#: .\home\templates\home\home.html:12
+msgid "Современные решения домофонов для вашей безопасности"
+msgstr ""
+
+#: .\home\templates\home\home.html:13
+msgid ""
+"Профессиональная установка, обслуживание и ремонт систем домофонных систем "
+"по всей Евпатории."
+msgstr ""
+
+#: .\home\templates\home\home.html:32
+msgid "Почему выбирают нас"
+msgstr ""
+
+#: .\home\templates\home\home.html:33
+msgid "Мы предоставляем лучшие решения домофонов для ваших нужд"
+msgstr ""
+
+#: .\home\templates\home\home.html:42
+msgid "Надёжная безопасность"
+msgstr ""
+
+#: .\home\templates\home\home.html:43
+msgid ""
+"Современные системы контроля доступа для защиты вашего имущества и близких."
+msgstr ""
+
+#: .\home\templates\home\home.html:52
+msgid "Профессиональная установка"
+msgstr ""
+
+#: .\home\templates\home\home.html:53
+msgid ""
+"Сертифицированные специалисты с многолетним опытом работы с домофонными "
+"системами."
+msgstr ""
+
+#: .\home\templates\home\home.html:62
+msgid "Поддержка 24/7"
+msgstr ""
+
+#: .\home\templates\home\home.html:63
+msgid "Круглосуточная техническая поддержка и аварийный ремонт."
+msgstr ""
+
+#: .\home\templates\home\home.html:72
+msgid "Доступные цены"
+msgstr ""
+
+#: .\home\templates\home\home.html:73
+msgid "Конкурентные цены без компромиссов в качестве и обслуживании."
+msgstr ""
+
+#: .\home\templates\home\home.html:85
+msgid "О нас"
+msgstr ""
+
+#: .\home\templates\home\home.html:86
+msgid ""
+"ИП Александров С. А. предоставляет профессиональные решения домофонов с 2008 "
+"года. Мы специализируемся на установке, обслуживании и модернизации систем "
+"домофонов для жилых зданий, офисов и промышленных объектов."
+msgstr ""
+
+#: .\home\templates\home\home.html:87
+msgid ""
+"Наша команда состоит из сертифицированных специалистов, которые стремятся "
+"предоставлять высококачественный сервис и удовлетворённость клиентов. Мы "
+"работаем с ведущими производителями, чтобы обеспечить вас самыми надёжными и "
+"инновационными решениями."
+msgstr ""
+
+#: .\home\templates\home\home.html:89 .\news\templates\news\news_list.html:4
+#: .\templates\base.html:43 .\templates\base.html:86
+msgid "Новости"
+msgstr ""
+
+#: .\home\templates\home\home.html:97
+msgid "Лет опыта"
+msgstr ""
+
+#: .\home\templates\home\home.html:103
+msgid "Абонентов"
+msgstr ""
+
+#: .\home\templates\home\home.html:109
+msgid "Адресов"
+msgstr ""
+
+#: .\home\templates\home\home.html:115
+msgid "Поддержка"
+msgstr ""
+
+#: .\home\templates\home\home.html:127
+msgid "Готовы улучшить свою безопасность?"
+msgstr ""
+
+#: .\home\templates\home\home.html:128
+msgid ""
+"Свяжитесь с нами сегодня для бесплатной консультации и расчёта стоимости."
+msgstr ""
+
+#: .\mysite\settings.py:129
+msgid "Russian"
+msgstr ""
+
+#: .\mysite\settings.py:130 .\templates\base.html:61
+msgid "English"
+msgstr ""
+
+#: .\news\templates\news\news_detail.html:32
+msgid "Назад к списку новостей"
+msgstr ""
+
+#: .\news\templates\news\news_detail.html:60
+msgid "Других новостей пока нет"
+msgstr ""
+
+#: .\news\templates\news\news_list.html:13
+msgid "Будьте в курсе наших последних объявлений и обновлений"
+msgstr ""
+
+#: .\news\templates\news\news_list.html:42
+msgid "Пагинация новостей"
+msgstr ""
+
+#: .\news\templates\news\news_list.html:84
+msgid "Новостей пока нет. Загляните позже!"
+msgstr ""
+
+#: .\services\templates\services\service_detail.html:33
+msgid "Назад к списку услуг"
+msgstr ""
+
+#: .\services\templates\services\service_detail.html:42
+msgid "Другие услуги"
+msgstr ""
+
+#: .\services\templates\services\service_detail.html:61
+msgid "Других услуг пока нет"
+msgstr ""
+
+#: .\services\templates\services\services_list.html:4 .\templates\base.html:40
+#: .\templates\base.html:85
+msgid "Услуги"
+msgstr ""
+
+#: .\services\templates\services\services_list.html:13
+msgid "Профессиональные решения домофонов для любых нужд"
+msgstr ""
+
+#: .\services\templates\services\services_list.html:37
+msgid "Цена по запросу"
+msgstr ""
+
+#: .\services\templates\services\services_list.html:41
+msgid "Узнать больше"
+msgstr ""
+
+#: .\services\templates\services\services_list.html:50
+msgid "Пагинация услуг"
+msgstr ""
+
+#: .\services\templates\services\services_list.html:92
+msgid "Услуги пока недоступны. Загляните позже!"
+msgstr ""
+
+#: .\templates\base.html:8 .\templates\base.html:25 .\templates\base.html:78
+msgid "ИП Александров С.А."
+msgstr ""
+
+#: .\templates\base.html:29
+msgid "Toggle navigation"
+msgstr ""
+
+#: .\templates\base.html:47 .\templates\base.html:87
+msgid "Задолженности"
+msgstr ""
+
+#: .\templates\base.html:60
+msgid "Русский"
+msgstr ""
+
+#: .\templates\base.html:79
+msgid "Профессиональные системы домофонов и услуги для вашей безопасности."
+msgstr ""
+
+#: .\templates\base.html:82
+msgid "Быстрые ссылки"
+msgstr ""

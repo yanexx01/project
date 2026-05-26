@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Услуги{% endblock %}
+{% block title %}{% trans "Услуги" %}{% endblock %}
 {% block meta_description %}Профессиональные решения домофонов для любых нужд{% endblock %}
 
 {% block content %}
@@ -8,8 +9,8 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-5 fw-bold mb-3">Наши услуги</h1>
-                <p class="lead text-muted">Профессиональные решения домофонов для любых нужд</p>
+                <h1 class="display-5 fw-bold mb-3">{% trans "Наши услуги" %}</h1>
+                <p class="lead text-muted">{% trans "Профессиональные решения домофонов для любых нужд" %}</p>
             </div>
         </div>
 
@@ -30,14 +31,14 @@
                         <p class="card-text text-muted flex-grow-1">{{ service.short_description|truncatewords:20 }}</p>
                         <div class="fw-bold text-primary">
                             {% if service.price %}
-                                <span class="price-value">{{ service.price|floatformat:0 }}</span> 
+                                <span class="price-value">{{ service.price|floatformat:0 }}</span>
                                 <span class="price-unit">{{ service.price_unit }}</span>
                             {% else %}
-                                <span class="price-value">Цена по запросу</span>
+                                <span class="price-value">{% trans "Цена по запросу" %}</span>
                             {% endif %}
                         </div>
                         <a href="{% url 'services:detail' slug=service.slug %}" class="btn btn-outline-primary mt-3">
-                            Узнать больше
+                            {% trans "Узнать больше" %}
                         </a>
                     </div>
                 </article>
@@ -46,7 +47,7 @@
         </div>
 
         {% if is_paginated %}
-        <nav aria-label="Пагинация услуг" class="mt-5">
+        <nav aria-label="{% trans 'Пагинация услуг' %}" class="mt-5">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
@@ -88,7 +89,7 @@
             <div class="col-lg-8 mx-auto text-center">
                 <div class="alert alert-info">
                     <i class="bi bi-info-circle"></i>
-                    Услуги пока недоступны. Загляните позже!
+                    {% trans "Услуги пока недоступны. Загляните позже!" %}
                 </div>
             </div>
         </div>

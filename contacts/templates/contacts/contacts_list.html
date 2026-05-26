@@ -1,26 +1,27 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Контакты{% endblock %}
+{% block title %}{% trans "Контакты" %}{% endblock %}
 
 {% block content %}
 <section class="py-5">
     <div class="container">
-        <h1 class="mb-4">Свяжитесь с нами</h1>
-        <p class="lead text-muted">Свяжитесь с нашей командой</p>
-        
+        <h1 class="mb-4">{% trans "Свяжитесь с нами" %}</h1>
+        <p class="lead text-muted">{% trans "Свяжитесь с нашей командой" %}</p>
+
         <div class="row mt-5">
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-geo-alt me-2"></i>Адрес</h5>
-                        <p class="card-text text-muted">п-ов Крым, г. Евпатория</p>
+                        <h5 class="card-title"><i class="bi bi-geo-alt me-2"></i>{% trans "Адрес" %}</h5>
+                        <p class="card-text text-muted">{% trans "п-ов Крым, г. Евпатория" %}</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-telephone me-2"></i>Телефон</h5>
+                        <h5 class="card-title"><i class="bi bi-telephone me-2"></i>{% trans "Телефон" %}</h5>
                         <p class="card-text text-muted">+7 (978) 08-007-06</p>
                     </div>
                 </div>
@@ -28,7 +29,7 @@
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-envelope me-2"></i>Email</h5>
+                        <h5 class="card-title"><i class="bi bi-envelope me-2"></i>{% trans "Email" %}</h5>
                         <p class="card-text text-muted">info@aleksandrov.ru</p>
                     </div>
                 </div>
@@ -36,8 +37,8 @@
             <div class="col-md-6">
                 <div class="card mb-4">
                     <div class="card-body">
-                        <h5 class="card-title"><i class="bi bi-clock me-2"></i>Часы работы</h5>
-                        <p class="card-text text-muted">Пн-Пт: 9:00 - 18:00</p>
+                        <h5 class="card-title"><i class="bi bi-clock me-2"></i>{% trans "Часы работы" %}</h5>
+                        <p class="card-text text-muted">{% trans "Пн-Пт: 9:00 - 18:00" %}</p>
                     </div>
                 </div>
             </div>
@@ -46,10 +47,10 @@
         <!-- CTA Section -->
         <div class="row mt-5 pt-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="mb-3">Хотите оставить заявку?</h2>
-                <p class="lead text-muted mb-4">Заполните форму и мы свяжемся с вами в течение 24 часов</p>
+                <h2 class="mb-3">{% trans "Хотите оставить заявку?" %}</h2>
+                <p class="lead text-muted mb-4">{% trans "Заполните форму и мы свяжемся с вами в течение 24 часов" %}</p>
                 <a href="{% url 'applications:create' %}" class="btn btn-primary btn-lg">
-                    <i class="bi bi-file-earmark-text me-2"></i>Оставить заявку
+                    <i class="bi bi-file-earmark-text me-2"></i>{% trans "Оставить заявку" %}
                 </a>
             </div>
 {% endblock %}

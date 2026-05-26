@@ -6,7 +6,7 @@ class NewsListView(ListView):
     model = News
     template_name = 'news/news_list.html'
     context_object_name = 'news_list'
-    paginate_by = 10
+    paginate_by = 9
     ordering = ['-published_at']
 
 

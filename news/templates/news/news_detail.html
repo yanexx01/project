@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}{{ news.title }} - Новости{% endblock %}
 {% block meta_description %}{{ news.short_description }}{% endblock %}
@@ -28,7 +29,7 @@
                 <!-- Back button -->
                 <a href="{% url 'news:list' %}" class="btn btn-outline-primary">
                     <i class="bi bi-arrow-left"></i>
-                    Назад к списку новостей
+                    {% trans "Назад к списку новостей" %}
                 </a>
             </div>
 
@@ -37,7 +38,7 @@
                 <div class="sticky-top" style="top: 100px;">
                     <div class="card border-0 shadow-sm mb-4">
                         <div class="card-header bg-white border-bottom-0 pt-4 px-4">
-                            <h5 class="mb-0 fw-bold">Последние новости</h5>
+                            <h5 class="mb-0 fw-bold">{% trans "Последние новости" %}</h5>
                         </div>
                         <div class="card-body p-0">
                             {% if latest_news %}
@@ -56,7 +57,7 @@
                             </ul>
                             {% else %}
                             <div class="p-4 text-center text-muted">
-                                <small>Других новостей пока нет</small>
+                                <small>{% trans "Других новостей пока нет" %}</small>
                             </div>
                             {% endif %}
                         </div>

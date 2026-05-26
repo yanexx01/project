@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %}Подать заявку{% endblock %}
+{% block title %}{% trans "Подать заявку" %}{% endblock %}
 
 {% block extra_css %}
 <style>
@@ -133,31 +134,31 @@
 <section class="application-section">
     <div class="container">
         <div class="application-form-container">
-            <h1 class="application-title">Подать заявку</h1>
-            <p class="application-subtitle">Заполните форму, и мы свяжемся с вами в ближайшее время</p>
+            <h1 class="application-title">{% trans "Подать заявку" %}</h1>
+            <p class="application-subtitle">{% trans "Заполните форму, и мы свяжемся с вами в ближайшее время" %}</p>
 
             <div class="info-box">
-                <p><strong>Важно:</strong> Поля, отмеченные звездочкой (*), обязательны для заполнения. Наш специалист свяжется с вами в течение 24 часов.</p>
+                <p><strong>{% trans "Важно:" %}</strong> {% trans "Поля, отмеченные звездочкой (*), обязательны для заполнения. Наш специалист свяжется с вами в течение 24 часов." %}</p>
             </div>
 
             <form method="post" id="applicationForm" novalidate>
                 {% csrf_token %}
 
                 <div class="mb-4">
-                    <label for="application_type" class="form-label required-field">Тип заявки</label>
+                    <label for="application_type" class="form-label required-field">{% trans "Тип заявки" %}</label>
                     <select class="form-select" id="application_type" name="application_type" required>
-                        <option value="">Выберите тип заявки</option>
-                        <option value="consultation">Консультация</option>
-                        <option value="service">Услуга</option>
-                        <option value="complaint">Жалоба</option>
+                        <option value="">{% trans "Выберите тип заявки" %}</option>
+                        <option value="consultation">{% trans "Консультация" %}</option>
+                        <option value="service">{% trans "Услуга" %}</option>
+                        <option value="complaint">{% trans "Жалоба" %}</option>
                     </select>
-                    <div class="invalid-feedback">Пожалуйста, выберите тип заявки</div>
+                    <div class="invalid-feedback">{% trans "Пожалуйста, выберите тип заявки" %}</div>
                 </div>
 
                 <div class="mb-4">
-                    <label for="service" class="form-label">Услуга</label>
+                    <label for="service" class="form-label">{% trans "Услуга" %}</label>
                     <select class="form-select" id="service" name="service">
-                        <option value="">Выберите услугу (необязательно)</option>
+                        <option value="">{% trans "Выберите услугу (необязательно)" %}</option>
                         {% for service in services %}
                             <option value="{{ service.id }}">{{ service.title }}</option>
                         {% endfor %}
@@ -165,42 +166,42 @@
                 </div>
 
                 <div class="mb-4">
-                    <label for="name" class="form-label required-field">Ваше имя</label>
-                    <input type="text" class="form-control" id="name" name="name" 
-                           placeholder="Введите ваше имя" required maxlength="100">
-                    <div class="invalid-feedback">Пожалуйста, введите ваше имя</div>
+                    <label for="name" class="form-label required-field">{% trans "Ваше имя" %}</label>
+                    <input type="text" class="form-control" id="name" name="name"
+                           placeholder="{% trans 'Введите ваше имя' %}" required maxlength="100">
+                    <div class="invalid-feedback">{% trans "Пожалуйста, введите ваше имя" %}</div>
                 </div>
 
                 <div class="mb-4">
-                    <label for="phone" class="form-label required-field">Телефон</label>
-                    <input type="tel" class="form-control" id="phone" name="phone" 
+                    <label for="phone" class="form-label required-field">{% trans "Телефон" %}</label>
+                    <input type="tel" class="form-control" id="phone" name="phone"
                            placeholder="+7 (___) ___-__-__" required maxlength="20">
-                    <div class="invalid-feedback">Пожалуйста, введите номер телефона</div>
+                    <div class="invalid-feedback">{% trans "Пожалуйста, введите номер телефона" %}</div>
                 </div>
 
                 <div class="mb-4">
-                    <label for="email" class="form-label required-field">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" 
+                    <label for="email" class="form-label required-field">{% trans "Email" %}</label>
+                    <input type="email" class="form-control" id="email" name="email"
                            placeholder="example@mail.ru" required>
-                    <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                    <div class="invalid-feedback">{% trans "Пожалуйста, введите корректный email" %}</div>
                 </div>
 
                 <div class="mb-4">
-                    <label for="message" class="form-label">Сообщение</label>
-                    <textarea class="form-control" id="message" name="message" rows="5" 
-                              placeholder="Опишите вашу задачу или вопрос (необязательно)"></textarea>
+                    <label for="message" class="form-label">{% trans "Сообщение" %}</label>
+                    <textarea class="form-control" id="message" name="message" rows="5"
+                              placeholder="{% trans 'Опишите вашу задачу или вопрос (необязательно)' %}"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-submit">
-                    Отправить заявку
+                    {% trans "Отправить заявку" %}
                 </button>
             </form>
 
             <div class="contact-info">
-                <h6>Нужна срочная помощь?</h6>
-                <p>Позвоните нам прямо сейчас:</p>
+                <h6>{% trans "Нужна срочная помощь?" %}</h6>
+                <p>{% trans "Позвоните нам прямо сейчас:" %}</p>
                 <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
-                <p>Или напишите: <a href="mailto:info@intercom-company.ru">info@intercom-company.ru</a></p>
+                <p>{% trans "Или напишите:" %} <a href="mailto:info@intercom-company.ru">info@intercom-company.ru</a></p>
             </div>
         </div>
     </div>

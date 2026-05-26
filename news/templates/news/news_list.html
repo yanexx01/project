@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Новости{% endblock %}
+{% block title %}{% trans "Новости" %}{% endblock %}
 {% block meta_description %}Последние новости и объявления от нашей компании домофонов{% endblock %}
 
 {% block content %}
@@ -8,8 +9,8 @@
     <div class="container">
         <div class="row mb-5">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-5 fw-bold mb-3">Последние новости</h1>
-                <p class="lead text-muted">Будьте в курсе наших последних объявлений и обновлений</p>
+                <h1 class="display-5 fw-bold mb-3">{% trans "Последние новости" %}</h1>
+                <p class="lead text-muted">{% trans "Будьте в курсе наших последних объявлений и обновлений" %}</p>
             </div>
         </div>
 
@@ -29,7 +30,7 @@
                         <h5 class="card-title">{{ news.title }}</h5>
                         <p class="card-text text-muted flex-grow-1">{{ news.short_description|truncatewords:20 }}</p>
                         <a href="{% url 'news:detail' slug=news.slug %}" class="btn btn-outline-primary mt-3">
-                            Читать далее
+                            {% trans "Читать далее" %}
                         </a>
                     </div>
                 </article>
@@ -38,7 +39,7 @@
         </div>
 
         {% if is_paginated %}
-        <nav aria-label="Пагинация новостей" class="mt-5">
+        <nav aria-label="{% trans 'Пагинация новостей' %}" class="mt-5">
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
@@ -80,7 +81,7 @@
             <div class="col-lg-8 mx-auto text-center">
                 <div class="alert alert-info">
                     <i class="bi bi-info-circle"></i>
-                    Новостей пока нет. Загляните позже!
+                    {% trans "Новостей пока нет. Загляните позже!" %}
                 </div>
             </div>
         </div>
