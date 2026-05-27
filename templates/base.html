@@ -51,14 +51,26 @@
                     </li>
                 </ul>
                 
-                <!-- Language Switcher Placeholder -->
+                <!-- Language Switcher -->
                 <div class="dropdown ms-3">
                     <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-globe me-1"></i>{{ LANGUAGE_CODE|upper }}
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-                        <li><a class="dropdown-item" href="?lang=ru">{% trans "Русский" %}</a></li>
-                        <li><a class="dropdown-item" href="?lang=en">{% trans "English" %}</a></li>
+                        <li>
+                            <form method="post" action="{% url 'set_language' %}" class="d-inline">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.path }}">
+                                <button type="submit" name="language" value="ru" class="dropdown-item" style="border: none; background: none; cursor: pointer; width: 100%; text-align: left;">{% trans "Русский" %}</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form method="post" action="{% url 'set_language' %}" class="d-inline">
+                                {% csrf_token %}
+                                <input name="next" type="hidden" value="{{ request.path }}">
+                                <button type="submit" name="language" value="en" class="dropdown-item" style="border: none; background: none; cursor: pointer; width: 100%; text-align: left;">{% trans "English" %}</button>
+                            </form>
+                        </li>
                     </ul>
                 </div>
             </div>

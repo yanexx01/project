@@ -19,9 +19,11 @@ class ServiceAdmin(TabbedTranslationAdmin):
     prepopulated_fields = {'slug': ('title',)}
     readonly_fields = ('created_at',)
     ordering = ('-created_at',)
-    
+
     fieldsets = (
-        (None, {'fields': ('title', 'slug')}),
+        (None, {'fields': ('category', 'title', 'slug')}),
         ("Стоимость", {'fields': ('price', 'price_unit')}),
         ("Описание", {'fields': ('short_description', 'description')}),
+        ("Изображение", {'fields': ('image',)}),
+        ("Информация", {'fields': ('created_at',)}),
     )

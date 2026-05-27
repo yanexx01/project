@@ -12,7 +12,7 @@ msgstr ""
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,225 +20,227 @@ msgstr ""
 #: .\applications\models.py:9
 #: .\applications\templates\applications\application_form.html:151
 msgid "Консультация"
-msgstr ""
+msgstr "Consultation"
 
 #: .\applications\models.py:10
 #: .\applications\templates\applications\application_form.html:152
 #: .\applications\templates\applications\application_form.html:159
 msgid "Услуга"
-msgstr ""
+msgstr "Service"
 
 #: .\applications\models.py:11
 #: .\applications\templates\applications\application_form.html:153
 msgid "Жалоба"
-msgstr ""
+msgstr "Complaint"
 
 #: .\applications\templates\applications\application_form.html:5
 #: .\applications\templates\applications\application_form.html:137
 msgid "Подать заявку"
-msgstr ""
+msgstr "Submit an Application"
 
 #: .\applications\templates\applications\application_form.html:138
 msgid "Заполните форму, и мы свяжемся с вами в ближайшее время"
-msgstr ""
+msgstr "Fill out the form, and we will contact you as soon as possible"
 
 #: .\applications\templates\applications\application_form.html:141
 msgid "Важно:"
-msgstr ""
+msgstr "Important:"
 
 #: .\applications\templates\applications\application_form.html:141
 msgid ""
 "Поля, отмеченные звездочкой (*), обязательны для заполнения. Наш специалист "
 "свяжется с вами в течение 24 часов."
 msgstr ""
+"Fields marked with an asterisk (*) are required. Our specialist will contact "
+"you within 24 hours."
 
 #: .\applications\templates\applications\application_form.html:148
 msgid "Тип заявки"
-msgstr ""
+msgstr "Application Type"
 
 #: .\applications\templates\applications\application_form.html:150
 msgid "Выберите тип заявки"
-msgstr ""
+msgstr "Select application type"
 
 #: .\applications\templates\applications\application_form.html:155
 msgid "Пожалуйста, выберите тип заявки"
-msgstr ""
+msgstr "Please select an application type"
 
 #: .\applications\templates\applications\application_form.html:161
 msgid "Выберите услугу (необязательно)"
-msgstr ""
+msgstr "Select a service (optional)"
 
 #: .\applications\templates\applications\application_form.html:169
 msgid "Ваше имя"
-msgstr ""
+msgstr "Your Name"
 
 #: .\applications\templates\applications\application_form.html:171
 msgid "Введите ваше имя"
-msgstr ""
+msgstr "Enter your name"
 
 #: .\applications\templates\applications\application_form.html:172
 msgid "Пожалуйста, введите ваше имя"
-msgstr ""
+msgstr "Please enter your name"
 
 #: .\applications\templates\applications\application_form.html:176
 #: .\contacts\templates\contacts\contacts_list.html:24
 msgid "Телефон"
-msgstr ""
+msgstr "Phone"
 
 #: .\applications\templates\applications\application_form.html:179
 msgid "Пожалуйста, введите номер телефона"
-msgstr ""
+msgstr "Please enter phone number"
 
 #: .\applications\templates\applications\application_form.html:183
 #: .\contacts\templates\contacts\contacts_list.html:32
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: .\applications\templates\applications\application_form.html:186
 msgid "Пожалуйста, введите корректный email"
-msgstr ""
+msgstr "Please enter a valid email"
 
 #: .\applications\templates\applications\application_form.html:190
 msgid "Сообщение"
-msgstr ""
+msgstr "Message"
 
 #: .\applications\templates\applications\application_form.html:192
 msgid "Опишите вашу задачу или вопрос (необязательно)"
-msgstr ""
+msgstr "Describe your task or question (optional)"
 
 #: .\applications\templates\applications\application_form.html:196
 #: .\home\templates\home\home.html:130
 msgid "Отправить заявку"
-msgstr ""
+msgstr "Submit Application"
 
 #: .\applications\templates\applications\application_form.html:201
 #: .\applications\templates\applications\application_success.html:52
 msgid "Нужна срочная помощь?"
-msgstr ""
+msgstr "Need urgent help?"
 
 #: .\applications\templates\applications\application_form.html:202
 msgid "Позвоните нам прямо сейчас:"
-msgstr ""
+msgstr "Call us right now:"
 
 #: .\applications\templates\applications\application_form.html:204
 msgid "Или напишите:"
-msgstr ""
+msgstr "Or write to us:"
 
 #: .\applications\templates\applications\application_success.html:4
 msgid "Заявка отправлена"
-msgstr ""
+msgstr "Application Submitted"
 
 #: .\applications\templates\applications\application_success.html:16
 msgid "Спасибо!"
-msgstr ""
+msgstr "Thank you!"
 
 #: .\applications\templates\applications\application_success.html:18
 msgid "Ваша заявка успешно отправлена"
-msgstr ""
+msgstr "Your application has been successfully submitted"
 
 #: .\applications\templates\applications\application_success.html:24
 msgid "Наш специалист свяжется с вами в течение 24 часов."
-msgstr ""
+msgstr "Our specialist will contact you within 24 hours."
 
 #: .\applications\templates\applications\application_success.html:26
 msgid "Проверьте почту - мы отправим подтверждение на указанные контакты."
-msgstr ""
+msgstr "Check your email - we will send a confirmation to the specified contacts."
 
 #: .\applications\templates\applications\application_success.html:32
 msgid "Что дальше?"
-msgstr ""
+msgstr "What's next?"
 
 #: .\applications\templates\applications\application_success.html:36
 msgid "Звонок:"
-msgstr ""
+msgstr "Call:"
 
 #: .\applications\templates\applications\application_success.html:36
 msgid "Специалист перезвонит на указанный номер"
-msgstr ""
+msgstr "A specialist will call you back at the specified number"
 
 #: .\applications\templates\applications\application_success.html:40
 msgid "Консультация:"
-msgstr ""
+msgstr "Consultation:"
 
 #: .\applications\templates\applications\application_success.html:40
 msgid "Обсудим детали и найдем лучшее решение"
-msgstr ""
+msgstr "We will discuss the details and find the best solution"
 
 #: .\applications\templates\applications\application_success.html:44
 msgid "Помощь:"
-msgstr ""
+msgstr "Help:"
 
 #: .\applications\templates\applications\application_success.html:44
 msgid "Быстро решим вашу задачу"
-msgstr ""
+msgstr "We will quickly solve your problem"
 
 #: .\applications\templates\applications\application_success.html:55
 msgid "Позвоните нам:"
-msgstr ""
+msgstr "Call us:"
 
 #: .\applications\templates\applications\application_success.html:60
 msgid "Напишите письмо"
-msgstr ""
+msgstr "Send an email"
 
 #: .\applications\templates\applications\application_success.html:68
 msgid "На главную"
-msgstr ""
+msgstr "Home"
 
 #: .\applications\templates\applications\application_success.html:71
 #: .\home\templates\home\home.html:15
 #: .\services\templates\services\services_list.html:12
 msgid "Наши услуги"
-msgstr ""
+msgstr "Our Services"
 
 #: .\contacts\templates\contacts\contacts_list.html:4 .\templates\base.html:50
 #: .\templates\base.html:88
 msgid "Контакты"
-msgstr ""
+msgstr "Contacts"
 
 #: .\contacts\templates\contacts\contacts_list.html:9
 #: .\home\templates\home\home.html:18 .\templates\base.html:92
 msgid "Свяжитесь с нами"
-msgstr ""
+msgstr "Contact Us"
 
 #: .\contacts\templates\contacts\contacts_list.html:10
 msgid "Свяжитесь с нашей командой"
-msgstr ""
+msgstr "Get in Touch with Our Team"
 
 #: .\contacts\templates\contacts\contacts_list.html:16
 msgid "Адрес"
-msgstr ""
+msgstr "Address"
 
 #: .\contacts\templates\contacts\contacts_list.html:17 .\templates\base.html:94
 msgid "п-ов Крым, г. Евпатория"
-msgstr ""
+msgstr "Crimean Peninsula, Yevpatoriya"
 
 #: .\contacts\templates\contacts\contacts_list.html:40
 msgid "Часы работы"
-msgstr ""
+msgstr "Working Hours"
 
 #: .\contacts\templates\contacts\contacts_list.html:41
 msgid "Пн-Пт: 9:00 - 18:00"
-msgstr ""
+msgstr "Mon-Fri: 9:00 - 18:00"
 
 #: .\contacts\templates\contacts\contacts_list.html:50
 msgid "Хотите оставить заявку?"
-msgstr ""
+msgstr "Want to submit an application?"
 
 #: .\contacts\templates\contacts\contacts_list.html:51
 msgid "Заполните форму и мы свяжемся с вами в течение 24 часов"
-msgstr ""
+msgstr "Fill out the form and we will contact you within 24 hours"
 
 #: .\contacts\templates\contacts\contacts_list.html:53
 msgid "Оставить заявку"
-msgstr ""
+msgstr "Leave an Application"
 
 #: .\debts\templates\debts\debts_list.html:4
 msgid "Долги"
-msgstr ""
+msgstr "Debts"
 
 #: .\debts\templates\debts\debts_list.html:16
 msgid "Уважаемые абоненты!"
-msgstr ""
+msgstr "Dear Subscribers!"
 
 #: .\debts\templates\debts\debts_list.html:17
 msgid ""
@@ -246,168 +248,182 @@ msgid ""
 "Если у вас возникли вопросы по начислениям, оставьте заявку в разделе "
 "'Контакты'."
 msgstr ""
+"Payment for intercom services is recommended to be made by the 10th of each "
+"month. If you have questions about charges, please submit an application in "
+"the 'Contacts' section."
 
 #: .\debts\templates\debts\debts_list.html:25
 msgid "Проверка задолженности"
-msgstr ""
+msgstr "Debt Check"
 
 #: .\debts\templates\debts\debts_list.html:34
 msgid "Лицевой счёт"
-msgstr ""
+msgstr "Account Number"
 
 #: .\debts\templates\debts\debts_list.html:36
 msgid "Например: 12345678"
-msgstr ""
+msgstr "For example: 12345678"
 
 #: .\debts\templates\debts\debts_list.html:39
 msgid "Фамилия"
-msgstr ""
+msgstr "Last Name"
 
 #: .\debts\templates\debts\debts_list.html:41
 msgid "Иванов"
-msgstr ""
+msgstr "Ivanov"
 
 #: .\debts\templates\debts\debts_list.html:43
 msgid "Проверить"
-msgstr ""
+msgstr "Check"
 
 #: .\debts\templates\debts\debts_list.html:51
 msgid "Результаты поиска"
-msgstr ""
+msgstr "Search Results"
 
 #: .\debts\templates\debts\debts_list.html:71
 msgid "Задолженность:"
-msgstr ""
+msgstr "Debt:"
 
 #: .\debts\templates\debts\debts_list.html:74
 msgid "Оплатить онлайн"
-msgstr ""
+msgstr "Pay Online"
 
 #: .\debts\templates\debts\debts_list.html:80
 msgid "Оплачено"
-msgstr ""
+msgstr "Paid"
 
 #: .\debts\templates\debts\debts_list.html:81
 msgid "Задолженности нет"
-msgstr ""
+msgstr "No Debt"
 
 #: .\debts\templates\debts\debts_list.html:99
 msgid "Лицевой счёт не найден"
-msgstr ""
+msgstr "Account Number Not Found"
 
 #: .\debts\templates\debts\debts_list.html:100
 msgid "Проверьте правильность введенного лицевого счёта и фамилии."
-msgstr ""
+msgstr "Check the correctness of the entered account number and last name."
 
 #: .\debts\templates\debts\debts_list.html:103
 msgid "Информация о долгах"
-msgstr ""
+msgstr "Debt Information"
 
 #: .\debts\templates\debts\debts_list.html:104
 msgid ""
 "Заполните форму слева, чтобы увидеть информацию о задолженностях по счёту."
 msgstr ""
+"Fill out the form on the left to see debt information for the account."
 
 #: .\debts\templates\debts\debts_list.html:114
 #: .\news\templates\news\news_detail.html:41
 #: .\news\templates\news\news_list.html:12
 msgid "Последние новости"
-msgstr ""
+msgstr "Latest News"
 
 #: .\debts\templates\debts\debts_list.html:122
 #: .\news\templates\news\news_list.html:33
 msgid "Читать далее"
-msgstr ""
+msgstr "Read More"
 
 #: .\debts\templates\debts\debts_list.html:127
 msgid "Новостей пока нет."
-msgstr ""
+msgstr "No news yet."
 
 #: .\debts\templates\debts\debts_list.html:132
 msgid "Частые вопросы"
-msgstr ""
+msgstr "Frequently Asked Questions"
 
 #: .\debts\templates\debts\debts_list.html:137
 msgid "Где найти номер лицевого счёта?"
-msgstr ""
+msgstr "Where to find the account number?"
 
 #: .\debts\templates\debts\debts_list.html:142
 msgid ""
 "Номер лицевого счёта указан в вашей бумажной квитанции в верхнем правом "
 "углу. Он состоит из 8 цифр."
 msgstr ""
+"The account number is indicated in your paper receipt in the upper right "
+"corner. It consists of 8 digits."
 
 #: .\debts\templates\debts\debts_list.html:149
 msgid "Как быстро обновляется информация об оплате?"
-msgstr ""
+msgstr "How quickly is the payment information updated?"
 
 #: .\debts\templates\debts\debts_list.html:154
 msgid ""
 "При оплате онлайн через наш сайт данные обновляются мгновенно. При оплате "
 "через сторонние банки зачисление может занять до 3 рабочих дней."
 msgstr ""
+"When paying online through our website, the data is updated instantly. When "
+"paying through third-party banks, the crediting may take up to 3 business "
+"days."
 
 #: .\home\templates\home\home.html:4 .\templates\base.html:37
 #: .\templates\base.html:84
 msgid "Главная"
-msgstr ""
+msgstr "Home"
 
 #: .\home\templates\home\home.html:12
 msgid "Современные решения домофонов для вашей безопасности"
-msgstr ""
+msgstr "Modern Intercom Solutions for Your Security"
 
 #: .\home\templates\home\home.html:13
 msgid ""
 "Профессиональная установка, обслуживание и ремонт систем домофонных систем "
 "по всей Евпатории."
 msgstr ""
+"Professional Installation, Maintenance and Repair of Intercom Systems "
+"throughout Yevpatoriya."
 
 #: .\home\templates\home\home.html:32
 msgid "Почему выбирают нас"
-msgstr ""
+msgstr "Why Choose Us"
 
 #: .\home\templates\home\home.html:33
 msgid "Мы предоставляем лучшие решения домофонов для ваших нужд"
-msgstr ""
+msgstr "We provide the best intercom solutions for your needs"
 
 #: .\home\templates\home\home.html:42
 msgid "Надёжная безопасность"
-msgstr ""
+msgstr "Reliable Security"
 
 #: .\home\templates\home\home.html:43
 msgid ""
 "Современные системы контроля доступа для защиты вашего имущества и близких."
 msgstr ""
+"Modern access control systems to protect your property and loved ones."
 
 #: .\home\templates\home\home.html:52
 msgid "Профессиональная установка"
-msgstr ""
+msgstr "Professional Installation"
 
 #: .\home\templates\home\home.html:53
 msgid ""
 "Сертифицированные специалисты с многолетним опытом работы с домофонными "
 "системами."
 msgstr ""
+"Certified specialists with many years of experience working with intercom "
+"systems."
 
 #: .\home\templates\home\home.html:62
 msgid "Поддержка 24/7"
-msgstr ""
+msgstr "24/7 Support"
 
 #: .\home\templates\home\home.html:63
 msgid "Круглосуточная техническая поддержка и аварийный ремонт."
-msgstr ""
+msgstr "Round-the-clock technical support and emergency repairs."
 
 #: .\home\templates\home\home.html:72
 msgid "Доступные цены"
-msgstr ""
+msgstr "Affordable Prices"
 
 #: .\home\templates\home\home.html:73
 msgid "Конкурентные цены без компромиссов в качестве и обслуживании."
-msgstr ""
+msgstr "Competitive prices without compromises in quality and service."
 
 #: .\home\templates\home\home.html:85
 msgid "О нас"
-msgstr ""
+msgstr "About Us"
 
 #: .\home\templates\home\home.html:86
 msgid ""
@@ -415,6 +431,10 @@ msgid ""
 "года. Мы специализируемся на установке, обслуживании и модернизации систем "
 "домофонов для жилых зданий, офисов и промышленных объектов."
 msgstr ""
+"IP Aleksandrov S.A. has been providing professional intercom solutions since "
+"2008. We specialize in the installation, maintenance and modernization of "
+"intercom systems for residential buildings, offices and industrial "
+"facilities."
 
 #: .\home\templates\home\home.html:87
 msgid ""
@@ -423,122 +443,125 @@ msgid ""
 "работаем с ведущими производителями, чтобы обеспечить вас самыми надёжными и "
 "инновационными решениями."
 msgstr ""
+"Our team consists of certified specialists who strive to provide high-quality "
+"service and customer satisfaction. We work with leading manufacturers to "
+"provide you with the most reliable and innovative solutions."
 
 #: .\home\templates\home\home.html:89 .\news\templates\news\news_list.html:4
 #: .\templates\base.html:43 .\templates\base.html:86
 msgid "Новости"
-msgstr ""
+msgstr "News"
 
 #: .\home\templates\home\home.html:97
 msgid "Лет опыта"
-msgstr ""
+msgstr "Years of Experience"
 
 #: .\home\templates\home\home.html:103
 msgid "Абонентов"
-msgstr ""
+msgstr "Subscribers"
 
 #: .\home\templates\home\home.html:109
 msgid "Адресов"
-msgstr ""
+msgstr "Addresses"
 
 #: .\home\templates\home\home.html:115
 msgid "Поддержка"
-msgstr ""
+msgstr "Support"
 
 #: .\home\templates\home\home.html:127
 msgid "Готовы улучшить свою безопасность?"
-msgstr ""
+msgstr "Ready to Improve Your Security?"
 
 #: .\home\templates\home\home.html:128
 msgid ""
 "Свяжитесь с нами сегодня для бесплатной консультации и расчёта стоимости."
-msgstr ""
+msgstr "Contact us today for a free consultation and cost estimate."
 
 #: .\mysite\settings.py:129
 msgid "Russian"
-msgstr ""
+msgstr "Russian"
 
 #: .\mysite\settings.py:130 .\templates\base.html:61
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: .\news\templates\news\news_detail.html:32
 msgid "Назад к списку новостей"
-msgstr ""
+msgstr "Back to News List"
 
 #: .\news\templates\news\news_detail.html:60
 msgid "Других новостей пока нет"
-msgstr ""
+msgstr "No other news yet"
 
 #: .\news\templates\news\news_list.html:13
 msgid "Будьте в курсе наших последних объявлений и обновлений"
-msgstr ""
+msgstr "Stay up to date with our latest announcements and updates"
 
 #: .\news\templates\news\news_list.html:42
 msgid "Пагинация новостей"
-msgstr ""
+msgstr "News Pagination"
 
 #: .\news\templates\news\news_list.html:84
 msgid "Новостей пока нет. Загляните позже!"
-msgstr ""
+msgstr "No news yet. Check back later!"
 
 #: .\services\templates\services\service_detail.html:33
 msgid "Назад к списку услуг"
-msgstr ""
+msgstr "Back to Services List"
 
 #: .\services\templates\services\service_detail.html:42
 msgid "Другие услуги"
-msgstr ""
+msgstr "Other Services"
 
 #: .\services\templates\services\service_detail.html:61
 msgid "Других услуг пока нет"
-msgstr ""
+msgstr "No other services yet"
 
 #: .\services\templates\services\services_list.html:4 .\templates\base.html:40
 #: .\templates\base.html:85
 msgid "Услуги"
-msgstr ""
+msgstr "Services"
 
 #: .\services\templates\services\services_list.html:13
 msgid "Профессиональные решения домофонов для любых нужд"
-msgstr ""
+msgstr "Professional Intercom Solutions for Any Needs"
 
 #: .\services\templates\services\services_list.html:37
 msgid "Цена по запросу"
-msgstr ""
+msgstr "Price on Request"
 
 #: .\services\templates\services\services_list.html:41
 msgid "Узнать больше"
-msgstr ""
+msgstr "Learn More"
 
 #: .\services\templates\services\services_list.html:50
 msgid "Пагинация услуг"
-msgstr ""
+msgstr "Services Pagination"
 
 #: .\services\templates\services\services_list.html:92
 msgid "Услуги пока недоступны. Загляните позже!"
-msgstr ""
+msgstr "Services are not available yet. Check back later!"
 
 #: .\templates\base.html:8 .\templates\base.html:25 .\templates\base.html:78
 msgid "ИП Александров С.А."
-msgstr ""
+msgstr "IP Aleksandrov S.A."
 
 #: .\templates\base.html:29
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Toggle navigation"
 
 #: .\templates\base.html:47 .\templates\base.html:87
 msgid "Задолженности"
-msgstr ""
+msgstr "Debts"
 
 #: .\templates\base.html:60
 msgid "Русский"
-msgstr ""
+msgstr "Russian"
 
 #: .\templates\base.html:79
 msgid "Профессиональные системы домофонов и услуги для вашей безопасности."
-msgstr ""
+msgstr "Professional intercom systems and services for your security."
 
 #: .\templates\base.html:82
 msgid "Быстрые ссылки"
-msgstr ""
+msgstr "Quick Links"
