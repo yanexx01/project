@@ -20,6 +20,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
 
+admin.site.site_header = "Админ панель"  # Текст в самом верху страницы (в шапке)
+admin.site.site_title = "Управление сайтом"  # Текст в теге <title> вкладки браузера
+admin.site.index_title = "Добро пожаловать в панель управления"  # Заголовок на главной странице админки
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
